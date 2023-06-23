@@ -1,0 +1,41 @@
+.feature{
+    padding: 50px 0;
+    &__head {
+        text-align: center;
+    }
+    &__head h2{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    &__head p{
+        color: $color-grey;
+        padding: 20px;
+    }
+    &__block{
+        text-align: center;
+    }
+    &__video{
+        overflow: hidden;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+@media (min-width: $width-tablet) {}
+
+@media (min-width: $width-desktop) {
+    .feature{
+        &__head h2{
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        &__head p{
+            color: $color-grey;
+            padding: 20px;
+    }
+}
+}

@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Medical Landing</title>
+</head>
+<!-- svg-elements -->
+<!-- doctor -->
+<svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="none" xmlnsV="https://vecta.io/nano" viewBox="0 0 166 166"
+        id="doctor">
+        <path d="M106.988 127.699v-6.759c0-13.806-11.193-24.999-24.999-24.999S56.99 107.134 56.99 120.94v6.759h49.998z"
+            fill="#e2e5f1"></path>
+        <path d="M98.676 127.698v-6.386a16.69 16.69 0 0 0-16.687-16.687 16.69 16.69 0 0 0-16.687 16.687v6.386h33.374z"
+            fill="#eff2fc"></path>
+        <path
+            d="M81.684 127.698c1.23-2.383 9.574-17.899 9.931-20.062-2.777-2.065-5.9-3.011-9.627-3.011-3.996 0-7.664 1.407-10.537 3.75 1.999 3.676 9.055 16.399 10.1 19.323h.132z"
+            fill="#b4b7c9"></path>
+        <path opacity=".1"
+            d="M83.82 104.711c2.737 1.254 5.007 3.469 6.448 6.255.753-1.606 1.266-2.826 1.348-3.328-2.31-1.717-4.861-2.658-7.797-2.927h0zm-4.225 18.825l1.957 4.168h.133l2.195-4.168h-4.285z"
+            fill="#585c7b"></path>
+        <g fill="#eff2fc">
+            <path
+                d="M124.147 91.854a8.28 8.28 0 0 0 0-11.706 8.28 8.28 0 0 0-11.706 0 8.28 8.28 0 0 0 0 11.706 8.28 8.28 0 0 0 11.706 0zm-76.905 2.259a8.28 8.28 0 0 0 6.573-9.686 8.28 8.28 0 0 0-9.686-6.573 8.28 8.28 0 0 0-6.573 9.686 8.28 8.28 0 0 0 9.686 6.573z">
+            </path>
+            <path
+                d="M89.045 106.456H74.935c-17.533 0-31.746-14.213-31.746-31.745s14.213-31.746 31.746-31.746h14.109c17.532 0 31.745 14.213 31.745 31.746s-14.213 31.745-31.745 31.745z">
+            </path>
+        </g>
+        <path opacity=".1"
+            d="M90.325 40.656h-4.071c14.214 0 25.737 9.972 25.737 24.186v2.186c0 14.214-12.804 29.593-27.018 29.593H68.926c-13.602 0-24.738-10.553-25.672-23.918-.041.663-.065 1.331-.065 2.005h0c0 17.533 14.213 31.746 31.746 31.746h14.109c18.424 0 31.467-15.149 32.747-31.475.108-1.381.195-2.982.03-4.334-1.966-16.153-15.318-29.988-31.496-29.988h0z"
+            fill="#585c7b"></path>
+        <path
+            d="M117.753 87.194c2.574-2.168 4.551-5.239 4.858-9.822v-3.48C122.611 54.622 106.989 39 87.718 39H76.261C56.99 39 41.368 54.622 41.368 73.893v3.48c.183 4.551 2.257 7.521 4.372 9.623.94.934 2.533.55 2.93-.714l6.261-19.92 8.391 5.885 9.149-6.94 9.518 6.997 9.884-7.576 10.135 7.628 6.865-6.321 6.066 20.308c.362 1.21 1.847 1.666 2.813.853h0z"
+            fill="#b4b7c9"></path>
+        <path
+            d="M66.089 50.638a2.02 2.02 0 0 1-.877-3.834c.434-.209 1.448-.653 2.18-.837a2.02 2.02 0 0 1 2.448 1.463c.272 1.08-.383 2.176-1.463 2.448-.298.075-1.006.363-1.416.56-.282.136-.58.2-.873.2h0zm-10.015 7.064a2.01 2.01 0 0 1-1.304-.479 2.02 2.02 0 0 1-.232-2.843 25.09 25.09 0 0 1 5.842-5.023c.947-.586 2.19-.294 2.776.653s.294 2.19-.653 2.776c-1.27.786-3.149 2.154-4.89 4.204a2.01 2.01 0 0 1-1.538.711h0z"
+            fill="#fff"></path>
+        <path
+            d="M122.331 72.301h-81a3.22 3.22 0 0 1-3.221-3.221v-2.908a3.22 3.22 0 0 1 3.221-3.221h81a3.22 3.22 0 0 1 3.221 3.221v2.908a3.22 3.22 0 0 1-3.221 3.221z"
+            fill="#e2e5f1"></path>
+        <path
+            d="M94.329 65.261c1.268-6.809-3.225-13.357-10.034-14.624s-13.357 3.225-14.624 10.034 3.225 13.357 10.034 14.624 13.357-3.225 14.624-10.034z"
+            fill="#6366f1"></path>
+        <path
+            d="M81.989 69.44a6.49 6.49 0 0 0 6.489-6.489 6.49 6.49 0 0 0-6.489-6.489A6.49 6.49 0 0 0 75.5 62.95a6.49 6.49 0 0 0 6.489 6.489z"
+            fill="#fff"></path>
+    </symbol>
+</svg>
+<!-- arwow-left -->.subscription
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="-4.5 0 20 20" id="arrow-left-335-svgrepo-com">
+        <title>arrow_left [#335]</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="">
+            <g id="Dribbble-Light-Preview" transform="translate(-345.000000, -6679.000000)" fill="">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                        d="M299.633777,6519.29231 L299.633777,6519.29231 C299.228878,6518.90256 298.573377,6518.90256 298.169513,6519.29231 L289.606572,6527.55587 C288.797809,6528.33636 288.797809,6529.60253 289.606572,6530.38301 L298.231646,6538.70754 C298.632403,6539.09329 299.27962,6539.09828 299.685554,6538.71753 L299.685554,6538.71753 C300.100809,6538.32879 300.104951,6537.68821 299.696945,6537.29347 L291.802968,6529.67648 C291.398069,6529.28574 291.398069,6528.65315 291.802968,6528.26241 L299.633777,6520.70538 C300.038676,6520.31563 300.038676,6519.68305 299.633777,6519.29231"
+                        id="arrow_left-[#335]"></path>
+                </g>
+            </g>
+        </g>
+    </symbol>
+</svg>
+<!-- arrow-right -->
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="-4.5 0 20 20" id="arrow-right-336-svgrepo-com">
+        <title>arrow_right [#336]</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="" fill-rule="evenodd">
+            <g id="Dribbble-Light-Preview" transform="translate(-305.000000, -6679.000000)" fill="">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path
+                        d="M249.365851,6538.70769 L249.365851,6538.70769 C249.770764,6539.09744 250.426289,6539.09744 250.830166,6538.70769 L259.393407,6530.44413 C260.202198,6529.66364 260.202198,6528.39747 259.393407,6527.61699 L250.768031,6519.29246 C250.367261,6518.90671 249.720021,6518.90172 249.314072,6519.28247 L249.314072,6519.28247 C248.899839,6519.67121 248.894661,6520.31179 249.302681,6520.70653 L257.196934,6528.32352 C257.601847,6528.71426 257.601847,6529.34685 257.196934,6529.73759 L249.365851,6537.29462 C248.960938,6537.68437 248.960938,6538.31795 249.365851,6538.70769"
+                        id="arrow_right-[#336]"></path>
+                </g>
+            </g>
+        </g>
+    </symbol>
+</svg>
+<!-- svg-elements -->
+<!-- facebook -->
+<svg width="0" height="0" class="card__icon hidden">
+    <symbol fill="" version="1.0" id="icon-facebook" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" enable-background="new 0 0 8.672 18.944"
+        xml:space="preserve" viewBox="0 0 8.672 18.944">
+        <path fill="" d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+      H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+      C5.765,5.069,5.75,3.709,6.275,3.356z"></path>
+    </symbol>
+</svg>
+<!-- instagram -->
+<svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="instagram-svgrepo-com">
+        <rect x="0" fill="none" width="20" height="20"></rect>
+        <g>
+            <path
+                d="M12.7 10c0-1.5-1.2-2.7-2.7-2.7S7.3 8.5 7.3 10s1.2 2.7 2.7 2.7c1.5 0 2.7-1.2 2.7-2.7zm1.4 0c0 2.3-1.8 4.1-4.1 4.1S5.9 12.3 5.9 10 7.7 5.9 10 5.9s4.1 1.8 4.1 4.1zm1.1-4.3c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .5 1 1zM10 3.4c-1.2 0-3.7-.1-4.7.3-.7.3-1.3.9-1.5 1.6-.4 1-.3 3.5-.3 4.7s-.1 3.7.3 4.7c.2.7.8 1.3 1.5 1.5 1 .4 3.6.3 4.7.3s3.7.1 4.7-.3c.7-.3 1.2-.8 1.5-1.5.4-1.1.3-3.6.3-4.7s.1-3.7-.3-4.7c-.2-.7-.8-1.3-1.5-1.5-1-.5-3.5-.4-4.7-.4zm8 6.6v3.3c0 1.2-.4 2.4-1.3 3.4-.9.9-2.1 1.3-3.4 1.3H6.7c-1.2 0-2.4-.4-3.4-1.3-.8-.9-1.3-2.1-1.3-3.4V10 6.7c0-1.3.5-2.5 1.3-3.4C4.3 2.5 5.5 2 6.7 2h6.6c1.2 0 2.4.4 3.4 1.3.8.9 1.3 2.1 1.3 3.4V10z">
+            </path>
+        </g>
+    </symbol>
+</svg>
+<!-- twitter -->
+<svg width="0" height="0" class="hidden">
+    <symbol fill="" version="1.1" id="twitter-svgrepo-com" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="-271 296.6 256.4 208.4">
+        <path d="M-14.6,321.2c-9.4,4.2-19.6,7-30.2,8.3c10.9-6.5,19.2-16.8,23.1-29.1c-10.2,6-21.4,10.4-33.4,12.8
+      c-9.6-10.2-23.3-16.6-38.4-16.6c-29,0-52.6,23.6-52.6,52.6c0,4.1,0.4,8.1,1.4,12c-43.7-2.2-82.5-23.1-108.4-55
+      c-4.5,7.8-7.1,16.8-7.1,26.5c0,18.2,9.3,34.3,23.4,43.8c-8.6-0.3-16.7-2.7-23.8-6.6v0.6c0,25.5,18.1,46.8,42.2,51.6
+      c-4.4,1.2-9.1,1.9-13.9,1.9c-3.4,0-6.7-0.3-9.9-0.9c6.7,20.9,26.1,36.1,49.1,36.5c-18,14.1-40.7,22.5-65.3,22.5
+      c-4.2,0-8.4-0.2-12.6-0.7c23.3,14.9,50.9,23.6,80.6,23.6c96.8,0,149.7-80.2,149.7-149.7c0-2.3,0-4.6-0.1-6.8
+      C-30.5,341-21.6,331.8-14.6,321.2"></path>
+    </symbol>
+</svg>
+<!-- linkedin -->
+<svg width="0" height="0" class=" card__icon hidden">
+    <symbol fill="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve" viewBox="0 0 512 512" id="linkedin-svgrepo-com">
+        <g id="7935ec95c421cee6d86eb22ecd125aef">
+            <path
+                d="M116.504,500.219V170.654H6.975v329.564H116.504
+          L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
+          C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219
+          c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
+          c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531
+          c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z">
+            </path>
+        </g>
+    </symbol>
+</svg>
+<!-- youtube -->
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.0" id="icon-youtube" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" enable-background="new 0 0 19.979 14.015"
+        xml:space="preserve" viewBox="0 0 19.979 14.015">
+        <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+      C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"></path>
+    </symbol>
+</svg>
+<!-- dribble -->
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 17 17" id="dribbble-svgrepo-com">
+        <path
+            d="M8.5 0c-4.694 0-8.5 3.806-8.5 8.5s3.806 8.5 8.5 8.5 8.5-3.806 8.5-8.5-3.806-8.5-8.5-8.5zM15.994 8.621c-2.075-0.456-3.896-0.423-5.469-0.092-0.251-0.627-0.536-1.273-0.849-1.93 1.681-0.648 3.292-1.586 4.548-2.934 1.106 1.308 1.776 2.994 1.776 4.835 0 0.041-0.006 0.080-0.006 0.121zM13.523 2.947c-1.16 1.257-2.688 2.135-4.297 2.74-0.76-1.468-1.69-2.96-2.814-4.385 0.664-0.193 1.363-0.302 2.088-0.302 1.934 0 3.692 0.742 5.023 1.947zM5.43 1.665c1.133 1.397 2.062 2.884 2.828 4.353-2.974 0.92-5.966 1.028-7.114 1.030 0.474-2.407 2.104-4.4 4.286-5.383zM1 8.5c0-0.151 0.014-0.3 0.022-0.449 0.065 0.001 0.134 0.001 0.212 0.001 1.306 0 4.402-0.125 7.482-1.114 0.3 0.625 0.578 1.245 0.82 1.844-3.605 1.101-5.736 3.705-6.513 4.826-1.251-1.34-2.023-3.133-2.023-5.108zM3.758 14.304c0.596-0.901 2.601-3.518 6.145-4.57 0.961 2.598 1.405 4.744 1.566 5.651-0.911 0.394-1.914 0.615-2.969 0.615-1.798 0-3.449-0.637-4.742-1.696zM12.4 14.894c-0.198-1.063-0.636-3.042-1.503-5.405 1.444-0.28 3.109-0.288 5.008 0.145-0.341 2.226-1.658 4.129-3.505 5.26z"
+            fill=""></path>
+    </symbol>
+</svg>
+
+
+
+<body>
+    <!-- header (navigation) -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex" href="cards.html">
+                    <img src="img/logo.svg" alt="Bootstrap" width="50" height="34">
+                    <h2 class="navbar-brand-title">Silicon</h2>
+                </a>
+                <div class="d-flex d-lg-none">
+                    <form class="form d-none- d-md-flex align-items-center" role="search">
+                        <span class="form-text d-none d-md-flex">Light</span>
+                        <input class="form-control me-2" type="checkbox" placeholder="Search" aria-label="Search">
+                        <span class="form-text  d-none d-md-flex">Dark</span>
+                        <button class=" d-none d-lg-flex btn btn-outline-success" type="submit">Buy now</button>
+                    </form>
+                    <button class=" order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px-;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Landings
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sidebar.html">Sidebar</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">UI Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="form d-none d-lg-flex align-items-center" role="search">
+                    <span class="form-text  d-none d-md-flex">Light</span>
+                    <input class="form-control me-2" type="checkbox" placeholder="Search" aria-label="Search">
+                    <span class="form-text  d-none d-md-flex">Dark</span>
+                    <button class="btn btn-nav btn-outline-success" type="submit">Buy now</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <!-- section -->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="section__item col-12 col-lg-6">
+                        <div class="section__block">
+                            <p class="section__subtitle">PROFESSIONAL MEDICAL CENTER</p>
+                            <h1 class="section__title">We Take Care of Your Health</h1>
+                            <p class="section__link">Don't have insurance? <a href="">Click here.</a></p>
+                        </div>
+                        <div class="d-none d-lg-flex section__med">
+                            <img src="/img/hero-img-2.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="section__clinic  section__item--position d-lg-block col-12 col-lg-">
+                        <div class="section__inner">
+                            <h2>Silicon Medical Center</h2>
+                            <p>
+                                Our medical center provides a wide range of health care services.
+                                We use only advanced technologies to keep your family happy and healthy,
+                                without any unexpected surprises. We appreciate your trust greatly.
+                                Our patients choose us and our services because they know we are the best.
+                            </p>
+                            <button type="button" class="btn btn-secondary btn-lg btn-light">About Us
+                        </div>
+                    </div>
+                    <div class="section__item col-12 col-lg-6">
+                        <div class=" d-none d-lg-block section__foto">
+                            <img class="section__img" src="/img/hero-img-1.jpg" alt="">
+                        </div>
+
+                        <div class="section__address section__address--time">
+                            <div class="section__wrap">
+                                <span>
+                                    <strong>Mon - Fri</strong>: 9:00 am - 22:00 am <br>
+                                </span>
+                                <span>
+                                    <strong>Sat - Sun:</strong>: 9:00 am - 20:00 am
+                                </span>
+                            </div>
+                            <a href="#" type="button" class="button">
+                                Make an appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- information -->
+        <div class="information">
+            <div class="container">
+                <div class="row">
+                    <div class="information__item col-12 col-md-4 d-lg-flex fl">
+                        <a href="" class="card-inner">
+                            <div
+                                class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover h-100 ">
+                                <img src="/img/doctor.svg" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title">Find a Doctor</h3>
+                                    <p class="card-text">Some quick example text to build
+                                    </p>
+                                    <a href="" class="card-link">See all doctors</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="information__item col-12 col-md-4 d-lg-flex fl">
+                        <a href="" class="card-inner">
+                            <div
+                                class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover h-100 ">
+                                <img src="/img/ambulance.svg" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title">Emergency Service</h3>
+                                    <p class="card-text">
+                                        (406) 555-0120
+                                    </p>
+                                    <a href="" class="card-link">Contact us</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="information__item col-12 col-md-4 d-lg-flex fl">
+                        <a href="" class="card-inner">
+                            <div
+                                class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover h-100 ">
+                                <img src="/img/virus.svg" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title">COVID-19 Info</h3>
+                                    <p class="p-0 card-text">
+                                        We offer quick COVID-19 testing by appointment.
+                                    </p>
+                                    <a href="" class="card-link">Learn moree</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feature -->
+        <div class="feature">
+            <div class="container">
+                <div class="row">
+                    <div class="feature__head">
+                        <h2>See What Makes Us Different</h2>
+                        <p>Your best care begins here.
+                            Hurry up to get top health care quality
+                            from leading doctors of the world.
+                        </p>
+                    </div>
+                    <div class="feature__block">
+                        <div class="feature__video">
+                            <video controls muted width="" src="/img/20220421_154913.mp4">
+                                <source src="/img/20220421_154913.mp4">
+                                <source src="/img/20220421_154913.WebM">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service -->
+        <div class="service">
+            <div class="container">
+                <div class="row">
+                    <div class="service__block col-lg-5">
+                        <h2> Highly Innovative Technology & Services</h2>
+                        <p>
+                            We appreciate your trust greatly. Our patients choose us
+                            and our services because they know we are the best.
+                            We offer complete health care to individuals with various health concerns.
+                        </p>
+                        <button type="button" class="btn btn-primary btn-lg">All services</button>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row technology">
+                            <div class="col-12 col-md-6">
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology__block--cardiology">
+                                        <h3 class="technology__title">Cardiology</h3>
+                                        <p class="technology__text">
+                                            Id mollis consectetur congue egestas egestas
+                                            suspendisse blandit justo.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology__block--scalpel">
+                                        <h3 class="technology__title">Surgery</h3>
+                                        <p class="technology__text">
+                                            Mattis urna ultricies non amet, purus in
+                                            auctor non. Odio vulputate ac nibh.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology-block--radiology">
+                                        <h3 class="technology__title">Radiology</h3>
+                                        <p class="technology__text">
+                                            Faucibus cursus maecenas lorem cursus nibh.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology__block--stethoscope">
+                                        <h3 class="technology__title">Family Medicine</h3>
+                                        <p class="technology__text">
+                                            Augue pulvinar justo, fermentum fames aliquam.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology__block--lungs">
+                                        <h3 class="technology__title">Pulmonary</h3>
+                                        <p class="technology__text">
+                                            Ullamcorper in magna varius quisque
+                                            enim tempor iaculis proin sed.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                                <a href="" class="technology__inner">
+                                    <div class="technology__block technology__block--tooth">
+                                        <h3 class="technology__title">Dental Care</h3>
+                                        <p class="technology__text">
+                                            Faucibus cursus maecenas lorem cursus nibh.
+                                            Sociis sit facilisis dolor arcu.
+                                        </p>
+                                        <span class="technology__link">Learn moree</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="service__wrap col-lg-8">
+                        <div class="technology ">
+                            <a href="" class="technology__inner">
+                                <div class="technology__block">
+                                    <h3 class="technology__title">Radiology</h3>
+                                    <p class="technology__text">
+                                        Faucibus cursus maecenas lorem cursus nibh.
+                                    </p>
+                                    <span class="technology__link">Learn moree</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="technology">
+                            <a href="" class="technology__inner">
+                                <div class="technology__block">
+                                    <h3 class="technology__title">Radiology</h3>
+                                    <p class="technology__text">
+                                        Faucibus cursus maecenas lorem cursus nibh.
+                                    </p>
+                                    <span class="technology__link">Learn moree</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="technology">
+                            <a href="" class="technology__inner">
+                                <div class="technology__block">
+                                    <h3 class="technology__title">Radiology</h3>
+                                    <p class="technology__text">
+                                        Faucibus cursus maecenas lorem cursus nibh.
+                                    </p>
+                                    <span class="technology__link">Learn moree</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="technology">
+                            <a href="" class="technology__inner">
+                                <div class="technology__block">
+                                    <h3 class="technology__title">Radiology</h3>
+                                    <p class="technology__text">
+                                        Faucibus cursus maecenas lorem cursus nibh.
+                                    </p>
+                                    <span class="technology__link">Learn moree</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- suport-group -->
+        <div class="support-group">
+            <div class="container">
+                <div class="row">
+                    <div class="support-group__item col-lg-5">
+                        <div class="support-group__img">
+                            <img src="/img/02 (2).jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="support-group__item support-group__item--body col-lg-7">
+                        <div class="support-group__buttons">
+                            <button class="support-group__btn support-group__btn--prev">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-left-335-svgrepo-com"></use>
+                                </svg>
+                            </button>
+                            <button class="support-group__btn support-group__btn--next">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-right-336-svgrepo-com"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="support-group__text">
+                            <h2>
+                                Support Groups for <span class="danger">Depression</span> & Anxiety
+                            </h2>
+                            <p>
+                                Magna cursus feugiat sed sodales praesent vehicula integer arcu.
+                                Felis duis lectus felis, tempus aliquet quis non.
+                                At integer consectetur eget nunc, fames. Et facilisi vel,
+                                luctus sed interdum vitae nec, velit. Maecenas purus et pharetra,
+                                at volutpat aenean.
+                            </p>
+                        </div>
+                        <button type="button" class="my-4 support-group__button btn btn-danger btn-lg">Learn
+                            moree</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- specialists -->
+        <div class="specialists">
+            <div class="container">
+                <div class=" row row-cols-1 row-cols-sm-3  row-cols-lg-4 g-4">
+                    <div class="card">
+                        <!-- <div class="border"> -->
+                        <div class="card-img">
+                            <img src="/img/16.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Ronald Richards</h5>
+                            <p class="card-text">Neurosurgeon</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star-1.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(19 reviews)</span>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/17.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Esther Howard</h5>
+                            <p class="card-text">Therapist</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(4 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/18.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Jerome Bell</h5>
+                            <p class="card-text">Anesthesiologist</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star-1.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(12 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/19.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Ralph Edwards</h5>
+                            <p class="card-text">Surgeon</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(8 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/20.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Darrell Steward</h5>
+                            <p class="card-text">Cardiologist</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star-1.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(14 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/21.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Annette Black</h5>
+                            <p class="card-text">Pediatrician</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star-1.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(10 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/22.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Dianne Russell</h5>
+                            <p class="card-text">Dentist</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(5 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/23.jpg" class="card-img-top" alt="...">
+                            <div class="card-block">
+                                <div class="card-social">
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#linkedin-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="card-socials">
+                                        <svg class="card__icon">
+                                            <use xlink:href="#twitter-svgrepo-com"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Courtney Henry</h5>
+                            <p class="card-text">Genecologist</p>
+                            <div class="card__stars">
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star">
+                                    <img src="/img/star.svg" alt="">
+                                </span>
+                                <span class="card__star"></span>
+                                <span>(16 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- reviews (slider) -->
+        <div class="reviews">
+            <h1 class="reviews__title">What Our Patients Say</h1>
+            <div class="container">
+                <section class="splide" aria-label="Basic Structure Example" id="reviews">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/30.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Fannie Summers</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/32.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Jerome Bell</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/34.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Jerome Bell</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/32.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Robert Fox</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/37.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Cammeron Williamson</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/30.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Fannie Summers</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Etiam augue ante, imperdiet et nunc sed,
+                                            bibendum faucibus est. Suspendisse egestas
+                                            facilisis erat eu eleifend.
+                                        <div class="card-stars d-flex">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                            <img src="/img/star.svg" alt="">
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="splide__inner">
+                                    <img class="splide__img" src="/img/32.jpg" alt="">
+                                    <div class="splide__text">
+                                        <h5>Jerome Bell</h5>
+                                        <span>Medical Center patient</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- latest-news (slider) -->
+        <div class="news">
+            <h2 class="news__title">Latest News & Healthy Tips</h2>
+            <div class="container">
+                <section class="splide" aria-label="Basic Structure Example" id="news">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="#" class="card-wrapper">
+                                    <div class="card">
+                                        <img src="img/01 (1).jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="card-inner d-flex">
+                                                <button href="" class="btn btn-secondary btn-sm">diseases</button>
+                                                <span>1day ago</span>
+                                            </div>
+                                            <h5 class="card-title">
+                                                <a href="">
+                                                Updates on COVID-19 vaccination efforts in your area
+                                                </a>
+                                            </h5>
+                                            <div class="card-review">
+                                                <img class="card-img" src="/img/30.jpg" alt="">
+                                                <div class="card-text">
+                                                    <h5 class="">Fannie Summers</h5>
+                                                    <span>Medical Center patient</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#" class="card-wrapper">
+                                    <div class="card">
+                                        <img src="img/02.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="card-inner d-flex">
+                                                <button href="" class="btn btn-secondary btn-sm">Healthy Tips</button>
+                                                <span>1day ago</span>
+                                            </div>
+                                            <h5 class="card-title">
+                                                <a href="">
+                                                    New drug to halt dementia after multiple head injuries
+                                                </a>
+                                            </h5>
+                                            <div class="card-review">
+                                                <img class="card-img" src="/img/32.jpg" alt="">
+                                                <div class="card-text">
+                                                    <h5 class="">Ralph Edwards</h5>
+                                                    <span>Medical Center patient</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#" class="card-wrapper">
+                                    <div class="card">
+                                        <img src="img/03.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="card-inner d-flex">
+                                                <button href="" class="btn btn-secondary btn-sm">diseases</button>
+                                                <span>1day ago</span>
+                                            </div>
+                                            <h5 class="card-title">
+                                                <a href="">
+                                                    Empowering women to make their health a priority
+                                                </a>
+                                            </h5>
+                                            <div class="card-review">
+                                                <img class="card-img" src="/img/37.jpg" alt="">
+                                                <div class="card-text">
+                                                    <h5 class="">Jenny Wilson</h5>
+                                                    <span>Medical Center patient</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#" class="card-wrapper">
+                                    <div class="card">
+                                        <img src="img/04.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="card-inner d-flex">
+                                                <button href="" class="btn btn-secondary btn-sm">diseases</button>
+                                                <span>1day ago</span>
+                                            </div>
+                                            <h5 class="card-title">
+                                                <a href="">
+                                                    Vitamin D: benefits, deficiency, sources, and dosage
+                                                </a>
+                                            </h5>
+                                            <div class="card-review">
+                                                <img class="card-img" src="/img/34.jpg" alt="">
+                                                <div class="card-text">
+                                                    <h5 class="">Albert Flores</h5>
+                                                    <span>Medical Center patient</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="address">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-md-6">
+                       <div class="address__mapp">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44264.379501263356!2d28.39273390039061!3d46.10047032312666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1687443517611!5m2!1sen!2s"
+                        width="" height="400px" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                       </div>
+                    </div>
+                    <div class="col col-12 col-md-6 ps-lg-5">
+                        <h2 class="address__title">
+                            Get Free Professional Consultation
+                        </h2>
+                        <ul class="address__list">
+                            <li class="address__item address__item--location">
+                                <span>445 Bayshor Blvd, San Francisco, CA 94124</span>
+                            </li>
+                            <li class="address__item address__item--tel">
+                                <span>(406) 555-0120</span>
+                            </li>
+                            <li class="address__item address__item--time">
+                                <span>
+                                    <strong>Mon - Fri</strong>: 9:00 am - 22:00 am <br>
+                                </span>
+                                <span>
+                                    <strong>Sat - Sun:</strong>: 9:00 am - 20:00 am
+                                </span>
+                            </li>
+                            <li class="address__item address__item--mail">examle@emaul.com</li>
+                        </ul>
+                        <button type="button" class="btn btn-primary btn-lg">Make an appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 col-lg-4">
+                    <h4 class="footer__title">Silicon</h4 class="footer__title">
+                    <p class="footer__text">
+                        Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit.
+                        Lacus, eget eu vitae nullam proin turpis etiam mi sit.
+                        Non feugiat feugiat egestas nulla nec. Arcu tempus,
+                        eget elementum dolor ullamcorper sodales ultrices eros.
+                    </p>
+                    <label class="footer__label" for="input">Subscribe to our newsletter</label>
+                    <div class="input-group mb-3">
+                        <input type="text" id="input" class="footer__input form-control" placeholder="Your e-amil"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="footer__btn btn btn-outline-secondary" type="button"
+                            id="button-addon2">Subscribe</button>
+                    </div>
+                </div>
+                <div class=" d-none d-lg-block col-md-4 col-lg-3 footer__block">
+                    <ul class="footer__list">
+                        <li class="footer__item  accordion-body">
+                            <a href="">Home</a>
+                        </li>
+
+                        <li class="footer__item  accordion-body">
+                            <a href="">About</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Service</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Prices</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">News</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item  accordion-body">
+                            <a href="">Terms & Conditions</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" d-none d-lg-block col-md-4 col-lg-2 footer__block">
+                    <ul class="footer__list">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        <li class="footer__item accordion-body">
+                            <a href="">Facebook</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Linkedin</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Twitter</a>
+                        </li>
+                        <li class="footer__item  accordion-body">
+                            <a href="">Instagram</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--footer-accordion -->
+                <div class="section col-md-5 d-lg-none">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Useful Links
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <h6><a href="">Home</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">About</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">Services</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">Prices</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">News</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">Terms&Conditions</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="">Privacy policy</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Socials
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <h6><a href="#">Facebook</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="#">Linkedin</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="#">Twitter</a></h6>
+                                </div>
+                                <div class="accordion-body">
+                                    <h6><a href="#">Instagram</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-mail col-12 col-md-5 col-lg-3 ">
+                            <h6>Contact US</h6>
+                            <a href="">email@example.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mail col-12 col-md-5 col-lg-3 d-none d-lg-block">
+                    <h6>Contact US</h6>
+                    <a href="">email@example.com</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </footer>
+    <div class="div" style="height: 200px;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

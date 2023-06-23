@@ -1,0 +1,30 @@
+.tags {
+    border: 1px solid $color-grey;
+    border-radius: 10px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        // padding-right: 30px
+    }
+
+    .btn:hover {
+        background-color: $color-grey-light;
+    }
+
+    .btn {
+        @include no-list-style;
+        border: 1px solid $color-grey;
+        border-radius: 5px;
+        width: max-content;
+        padding: 10px 20px;
+        color: $color-black;
+        margin: 5px 0;
+        margin-right: 10px;
+    }
+
+    &__item a {
+        text-decoration: none;
+
+    }
+}

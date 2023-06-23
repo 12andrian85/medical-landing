@@ -1,0 +1,108 @@
+.footer {
+    background-color: $color-primary;
+    padding: 30px 0;
+
+    &__title {
+        position: relative;
+        margin: 20px 0;
+        font-weight: 600;
+        padding-left: 40px;
+    }
+
+    &__title:before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: chartreuse;
+        background-image: url("/img/logo.svg");
+        background-size: cover;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 20px;
+    }
+
+    &__list {
+        @include no-list-style;
+    }
+
+    &__text {
+        color: $color-grey;
+    }
+
+    &__btn {
+        color: $color-white;
+        background-color: $color-secondary;
+    }
+
+    &__btn:hover {
+        background-color: $color-blue;
+    }
+
+    .col-mail h6 {
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    .footer__acordion {
+        @include no-list-style;
+
+    }
+
+    .dropdown-menu {
+        @include no-list-style;
+        background-color: red;
+    }
+
+    .accordion-item {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .accordion-button {
+        background-color: transparent;
+        border: 0;
+        padding-left: 0;
+        justify-content: start;
+    }
+
+    .accordion-button:after {
+        margin-left: 10px;
+    }
+
+
+    .accordion-body a {
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    .accordion-body a:hover {
+        color: $color-blue;
+    }
+}
+
+@media (min-width: $width-tablet) {
+    .footer {
+        .accordion-body {
+            padding: 10px 0 10px 50px;
+        }
+
+        .section {
+            padding-left: 100px;
+        }
+    }
+}
+
+@media (min-width: $width-desktop ) {
+    .footer {
+        &__acordion {
+            display: none;
+        }
+
+        .col-mail {
+            padding-left: 100px;
+        }
+
+
+    }
+}

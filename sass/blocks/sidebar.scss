@@ -1,0 +1,164 @@
+.sidebar {
+
+
+    &__head {
+        align-items: center;
+    }
+
+    &__burger {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__icon svg {
+        height: 30px;
+        width: 30px;
+    }
+    
+    
+    &__block,
+    &__img {
+        position: relative;
+    }
+    
+    &__block::before,
+    &__img::before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-image: url("/img/bookmark-svgrepo-com.svg");
+        background-color: $color-grey-light;
+        background-size: cover;
+        background-position: center;
+        right: 20px;
+        top: 20px;
+        border-radius: 25px;
+    }
+
+    .badges {
+        &__item {
+            color: $color-white;
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: capitalize;
+            background-color: blue;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        &__item--blue {
+            background-color: $color-blue;
+            box-shadow: 1px 2px 3px $color-blue;
+        }
+
+        &__item--yellow {
+            background-color: $color-yellow;
+            box-shadow: 1px 2px 3px $color-yellow;
+        }
+
+        &__item--red {
+            background-color: $color-danger;
+            box-shadow: 1px 2px 3px $color-danger;
+        }
+
+        &__item--green {
+            background-color: $color-green;
+            box-shadow: 1px 2px 3px $color-green;
+        }
+    }
+
+    .card {
+        border: none;
+    }
+
+    .img-fluid {
+        object-fit: cover;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+
+    .card-link {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    .card-text {
+        margin: 20px 0;
+        color: $color-grey;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .stats {
+        display: flex;
+        font-size: 20px;
+
+        &__date {
+            color: $color-grey;
+            padding: 0 10px;
+            margin-right: 10px;
+            border-right: 1px solid grey;
+        }
+
+        &__number {
+            display: flex;
+            align-items: center;
+            color: $color-grey;
+            margin: 0 10px;
+        }
+
+        &__btn {
+            background-color: transparent;
+            border: none;
+            background-image: url("/img/twitter-154-svgrepo-com.svg");
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+        }
+
+        &__btn--like {
+            background-image: url("/img/like-svgrepo-com.svg");
+        }
+
+        &__btn--message {
+            background-image: url("/img/message-square-svgrepo-com.svg");
+        }
+
+        &__btn--share {
+            background-image: url("/img/share-android-svgrepo-com.svg");
+        }
+    }
+    &__btn {
+        position: relative;
+    }
+    &__btn button{
+        color: $color-blue; 
+        border-radius: 10px;
+        background-color: $color-white;
+        border: 1px solid $color-blue;
+    }
+    &__btn:hover{
+        border-radius: 10px;
+        color: $color-white;
+        background-color: $color-blue;
+        
+        svg{
+            fill:$color-white;
+        }
+    }
+    
+    &__btn svg{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        fill: $color-blue;
+    }
+}

@@ -1,0 +1,15 @@
+.posts{
+    background-color: $color-grey-light;
+    border-radius: 10px;
+    &__title{
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+    
+    &__row a{
+        text-decoration: none;
+        color: $color-black;
+        font: 18px;
+        font-weight: 600;
+    }
+}

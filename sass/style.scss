@@ -1,0 +1,35 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "global/scaffolding.scss";
+@import "global/typography.scss";
+@import "global/buttons.scss";
+@import "global/forms.scss";
+
+@import "blocks/header.scss";
+@import "blocks/section.scss";
+@import "blocks/information.scss";
+@import "blocks/feature.scss";
+@import "blocks/service.scss";
+@import "blocks/support-group.scss";
+@import "blocks/specialists.scss";
+@import "blocks/reviews.scss";
+@import "blocks/cards.scss";
+@import "blocks/news.scss";
+@import "blocks/address.scss";
+@import "blocks/sidebar.scss";
+@import "blocks/categories.scss";
+@import "blocks/posts.scss";
+@import "blocks/tags.scss";
+@import "blocks/social.scss";
+@import "blocks/subscription.scss";
+
+
+
+
+
+
+@import "blocks/nav.scss";
+// @import "blocks/form.scss";
+@import "blocks/contact.scss";
+@import "blocks/footer.scss";

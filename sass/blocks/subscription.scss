@@ -1,0 +1,20 @@
+.subscription {
+    padding: 30px 0;
+    
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    &__text{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 20px;
+    }
+    &__col{
+        display: flex;
+        align-items: center;
+        color: $color-grey;
+    }
+}

@@ -1,0 +1,96 @@
+.navbar {
+    width: 100%;
+    /* margin: 0 auto; */
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top: 0;
+    .navbar-brand {
+        align-items: center;
+        .navbar-brand-title {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    .form {
+        margin: 0 20px;
+
+        .form-text {
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-control {
+            margin: 0 10px;
+        }
+
+        .btn {
+            margin: 0 20px;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-link:active{
+            color: $color-blue-light;
+        }
+        .nav-link{
+            font-size: 1rem;
+            font-weight: 600;
+        }   
+    }
+    .btn-nav{
+        position: relative;
+        color: $color-white;
+        font-size: 1rem;
+        background-color: $color-secondary;
+        padding-left: 30px;
+    }
+    .btn-nav:before{
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background-image: url("/img/basket-svgrepo-com.svg");
+        background-size: cover;
+        transform: translate(-50%, -50%);
+        left: 15px;
+        top: 50%;
+    }
+
+    .btn-nav:hover{
+        background-color: $color-blue;
+    }
+
+
+}
+
+@media (min-width: $width-tablet ) {
+    .navbar {}
+}
+
+@media (min-width: $width-desktop ) {
+    .navbar {
+        .navbar-brand {
+            padding: 0 30px;
+        }
+        .navbar-nav{
+
+            .nav-link {
+                padding: 0 30px;
+            }
+            .nav-link:hover{
+                color: $color-secondary;
+            }
+        }
+    }
+
+
+}

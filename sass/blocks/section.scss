@@ -1,0 +1,201 @@
+.section {
+    position: relative;
+        
+    
+
+    &__foto {
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 110%;
+        object-fit: cover;
+        border-radius: 0% 0% 0% 3%;
+    }
+
+    &__address {
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrap {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    &__wrap:before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        background-color: $color-grey-light;
+        background-image: url(/img/clock-svgrepo-com.svg);
+        background-size: cover;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__block {
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__link {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    &__clinic {
+        color: white;
+
+    }
+
+    &__inner {
+        background-color: #6366F1FF;
+        border-radius: 10px;
+        padding: 30px 20px;
+    }
+
+    &__inner {
+        p {
+            line-height: 2;
+        }
+
+        h2 {
+            font-weight: 600;
+        }
+    }
+
+    .btn {
+        position: relative;
+        padding: 10px 20px;
+        padding-right: 40px;
+    }
+
+    .btn:hover {
+        background-color: $color-grey-light;
+    }
+
+    .btn::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("/img/arrow-right-svgrepo-1.svg");
+        background-size: cover;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .button {
+        padding: 15px 40px;
+        margin: 30px auto;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: $color-blue;
+        color: $color-white;
+        box-shadow: 0px 2px 7px 0px $color-blue;
+    }
+
+    .button:hover {
+        background-color: $color-blue-dark;
+    }
+
+
+
+
+
+}
+
+@media (min-width: $width-tablet) {
+    .section {
+        &__address {
+            padding: 30px 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        &__wrap {
+            padding-left: 60px;
+        }
+
+        &__wrap::before {
+            left: 0;
+        }
+
+
+        .button {
+            margin: 30px 0;
+        }
+    }
+}
+
+@media (min-width: $width-desktop) {
+    .section {
+        &__med {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        &__med img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__block {
+            padding: 50px 0;
+            text-align: start;
+            padding-right: 160px;
+        }
+
+        &__block h1 {
+            font-size: 4rem;
+        }
+
+        &__clinic {}
+
+        &__inner {
+            padding: 70px;
+        }
+
+        &__foto {
+            height: min-content;
+        }
+
+        &__img {
+            height: 800px;
+        }
+
+        &__item--position {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            background-color: aliceblue;
+            background-color: transparent;
+            max-width: 500px;
+            // display: none;
+        }
+
+    }
+}

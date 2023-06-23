@@ -1,0 +1,135 @@
+.service {
+    padding: 30px;
+
+    &__wrap {
+        padding: 0;
+        text-align: center;
+    }
+
+    &__block h2 {
+        font-size: 1.5rem;
+        padding: 0;
+        font-weight: 600;
+    }
+    &__block {
+        text-align: center;
+    }
+
+    &__block p {
+        color: $color-grey;
+    }
+
+    .btn {
+        margin: 20px 0;
+    }
+
+    .technology {
+        // background-color: rgb(92, 112, 173);
+
+        // max-width: 350px;
+        border-radius: 10px;
+        margin: 10px 0;
+
+        &__block {
+            position: relative;
+            text-align: start;
+            margin: 10px 0;
+            padding: 20px 0 20px 90px;
+            border-radius: 10px;
+            background-color: #F3F6FFFF;
+        }
+
+        &__block:hover {
+            box-shadow: 0px 6px 11px 0px grey;
+        }
+
+        &__block::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 60px;
+            background-color: $color-white;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 20px;
+            border-radius: 5px;
+        }
+
+        &__block--cardiology::before {
+            background-image: url("/img/cardiology.svg");
+        }
+        &__block--scalpel::before{
+            background-image: url("/img/scalpel.svg");
+        }
+        &__block--radiology::before{
+            background-image: url("/img/x-ray.svg");
+        }
+        &__block--stethoscope::before{
+            background-image: url("/img/stethoscope.svg");
+        }
+        &__block--lungs::before{
+            background-image: url("/img/lungs.svg");
+        }
+        &__block--tooth::before{
+            background-image: url("/img/tooth.svg");
+        }
+        &__inner {
+            text-decoration: none;
+        }
+
+        &__title {
+            color: $color-black;
+            font-weight: 600;
+        }
+
+        &__text {
+            color: $color-grey;
+            font-size: 20px;
+        }
+
+        &__link {
+            position: relative;
+        }
+
+        &__link::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 10px;
+            transform: translateY(-50%);
+            top: 50%;
+            background-image: url(/img/arrow-right-svgrepo-com.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+    }
+}
+
+@media (min-width: $width-tablet) {
+    .service {
+        &__block h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (min-width: $width-desktop) {
+    .service {
+
+        &__block {
+            padding-right: 60px;
+        }
+
+        &__block {
+            text-align: start;
+        }
+
+        &__block h2 {
+            font-size: 3rem;
+            padding: 0;
+        }
+    }
+}
