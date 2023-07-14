@@ -1,0 +1,85 @@
+.pricing {
+    // padding-top: 84px;
+
+    .title {
+        height: 500px;
+    }
+
+    .btn-block:hover {
+        background-color: $color-blue;
+        color: $color-white;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: $color-blue;
+    }
+
+    .accordion button::after {
+        background-color: #F3F6FFFF;
+        padding: 16px;
+        background-position: center;
+        border-radius: 29px;
+    }
+
+    .accordion button:hover::after {
+        background-color: $color-primary;
+        color: white;
+    }
+
+    .splide-shadow:hover {
+        bottom: 5px;
+        transition: 0.3s;
+        box-shadow: 0px 3px 7px -1px $color-grey;
+    }
+
+    .input-form::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("/img/pricing/envelope-closed-svgrepo-com.svg");
+        background-size: cover;
+        top: 19%;
+        left: 15px;
+    }
+    .input-forms::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("/img/pricing/envelope-closed-svgrepo-com.svg");
+        background-size: cover;
+        top: 38%;
+        left: 15px;
+    }
+ 
+}
+
+
+.c-breadcrumb {
+
+    .home:hover {
+        color: $color-white;
+
+        .icon {
+            fill: $color-white;
+        }
+    }
+}
+.nav-link{
+    color: white;
+}
+.nav-link:active{
+    color: $color-white;
+}
+
+
+@media (min-width: $width-tablet) {}
+
+@media (min-width: $width-desktop) {
+    .pricing {
+        .title {
+            height: 550px;
+        }
+    }
+}

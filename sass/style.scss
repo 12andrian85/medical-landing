@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+@import "blocks/custom-bootstrap.scss";
 @import "global/scaffolding.scss";
 @import "global/typography.scss";
 @import "global/buttons.scss";
@@ -8,13 +9,13 @@
 
 @import "blocks/header.scss";
 @import "blocks/section.scss";
-@import "blocks/information.scss";
+@import "blocks/c-info.scss";
 @import "blocks/feature.scss";
 @import "blocks/service.scss";
 @import "blocks/support-group.scss";
 @import "blocks/specialists.scss";
 @import "blocks/reviews.scss";
-@import "blocks/cards.scss";
+@import "blocks/components.scss";
 @import "blocks/news.scss";
 @import "blocks/address.scss";
 @import "blocks/sidebar.scss";
@@ -23,7 +24,11 @@
 @import "blocks/tags.scss";
 @import "blocks/social.scss";
 @import "blocks/subscription.scss";
-
+@import "blocks/about.scss";
+@import "blocks/portfolio.scss";
+@import "blocks/services.scss";
+@import "blocks/contacts.scss";
+@import "blocks/pricing.scss";
 
 
 
@@ -31,5 +36,4 @@
 
 @import "blocks/nav.scss";
 // @import "blocks/form.scss";
-@import "blocks/contact.scss";
 @import "blocks/footer.scss";

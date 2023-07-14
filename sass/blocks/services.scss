@@ -1,0 +1,164 @@
+.services {
+
+    .icon {
+        width: 17px;
+        height: 16px;
+    }
+
+    .icon {
+        stroke: $color-primary;
+    }
+
+    .btn {
+        width: 100%;
+        color: $color-primary;
+    }
+
+    .btn:hover {
+        background-color: $color-primary;
+        color: $color-white;
+
+        .icon {
+            stroke: white;
+            fill: white;
+        }
+    }
+
+    .icon-check {
+        width: 30px;
+        height: 22px;
+    }
+
+    .category {
+
+        .splide__track--nav>.splide__list>.splide__slide.is-active {
+            border: none;
+        }
+
+        .btn {
+            position: relative;
+            background-color: rgb(216, 217, 221);
+            border-radius: 5px;
+            color: black;
+            margin: 10px;
+            padding-left: 30px;
+        }
+
+        .btn::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            // background-image: url(/img/services/graduation-cap-svgrepo-com.svg);
+            background-size: cover;
+            left: 110px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .btn:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+
+        .btn-education:before {
+            background-image: url("/img/services/graduation-cap-svgrepo-com.svg");
+        }
+
+        .btn-ecomerce:before {
+            background-image: url("/img/services/cart-4-svgrepo-com.svg");
+        }
+
+        .btn-sports:before {
+            background-image: url("/img/services/run-svgrepo-com.svg");
+        }
+
+        .btn-construction:before {
+            background-image: url("/img/services/paint-roller-2-svgrepo-com.svg");
+        }
+
+        .btn-medicine:before {
+            background-image: url("/img/services/medical-cross-svgrepo-com.svg");
+        }
+
+        .btn-realestate:before {
+            background-image: url("/img/services/buildings-svgrepo-com.svg");
+        }
+
+        .btn-wellness:before {
+            background-image: url("/img/services/spa-svgrepo-com.svg");
+        }
+
+        .card {
+            margin: 0;
+            padding: 50px 10px 30px 10px;
+        }
+
+        .card img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 2rem;
+        }
+    }
+
+    .splide__list {
+        // width: max-content;
+    }
+
+    .splide__slide .is-next .is-visible {
+        width: auto;
+        height: auto;
+    }
+
+    .splide__slide--main {
+        overflow: hidden;
+        height: 400px;
+    }
+
+    .splide__slide--main img {
+        width: 100%;
+
+    }
+    .footer{
+      
+
+    }
+
+}
+
+@media (min-width: $width-tablet) {
+    .services {
+
+
+        .btn {
+            width: auto;
+            margin-right: 20px;
+        }
+
+
+
+        .category {
+            .tab {
+                &__content {
+                    display: none;
+                }
+
+                &__content--active {
+                    display: block;
+                }
+            }
+
+            .img-svg {
+                width: 20px;
+            }
+
+            .btn::before {
+                left: 5px;
+            }
+
+        }
+    }
+}

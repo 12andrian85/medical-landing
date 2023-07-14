@@ -1,29 +1,42 @@
 .sidebar {
-
-
-    &__head {
+    .sidebar-head {
         align-items: center;
+        padding: 20px 0;
     }
 
-    &__burger {
+    .sidebar-title {
+        font-weight: 700;
+    }
+
+    .sidebar-burger {
         display: flex;
         align-items: center;
         flex-direction: row;
     }
 
-    &__icon svg {
+    .sidebar-icon svg {
         height: 30px;
         width: 30px;
     }
-    
-    
-    &__block,
-    &__img {
+
+    .card-link {
+        text-decoration: none;
+    }
+
+    .card-link h3 {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    .sidebar-block,
+    .sidebar-img {
         position: relative;
     }
-    
-    &__block::before,
-    &__img::before {
+
+    .sidebar-block::before,
+    .sidebar-img::before {
         position: absolute;
         content: "";
         width: 40px;
@@ -37,33 +50,51 @@
         border-radius: 25px;
     }
 
+    .sidebar-block {
+        .card-link {
+            text-decoration: none;
+        }
+
+        .card-link h3 {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+    }
+
+
+    .form-icon {
+        width: 25px;
+    }
+
     .badges {
         &__item {
             color: $color-white;
             font-size: 14px;
             text-decoration: none;
             text-transform: capitalize;
-            background-color: blue;
+            // background-color: blue;
             padding: 5px 10px;
             border-radius: 5px;
         }
 
-        &__item--blue {
+        .badges-item--blue {
             background-color: $color-blue;
             box-shadow: 1px 2px 3px $color-blue;
         }
 
-        &__item--yellow {
+        .badges-item--yellow {
             background-color: $color-yellow;
             box-shadow: 1px 2px 3px $color-yellow;
         }
 
-        &__item--red {
+        .badges-item--red {
             background-color: $color-danger;
             box-shadow: 1px 2px 3px $color-danger;
         }
 
-        &__item--green {
+        .badges-item--green {
             background-color: $color-green;
             box-shadow: 1px 2px 3px $color-green;
         }
@@ -96,13 +127,15 @@
 
     .stats {
         display: flex;
-        font-size: 20px;
+        font-size: 16px;
 
         &__date {
             color: $color-grey;
             padding: 0 10px;
             margin-right: 10px;
             border-right: 1px solid grey;
+            display: flex;
+            align-items: center;
         }
 
         &__number {
@@ -133,32 +166,58 @@
             background-image: url("/img/share-android-svgrepo-com.svg");
         }
     }
+
     &__btn {
         position: relative;
-    }
-    &__btn button{
-        color: $color-blue; 
+        color: $color-blue;
         border-radius: 10px;
-        background-color: $color-white;
         border: 1px solid $color-blue;
+
+
     }
-    &__btn:hover{
-        border-radius: 10px;
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+        fill: $color-blue;
+
+    }
+
+
+
+    button:hover {
         color: $color-white;
         background-color: $color-blue;
-        
-        svg{
-            fill:$color-white;
+        border: $color-blue;
+
+        .sidebar__svg {
+            fill: white;
         }
+
+    }
+
+    &__svg-message {
+        width: 25px;
+        left: 30px;
     }
     
-    &__btn svg{
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        top: 50%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        fill: $color-blue;
+    &__email:focus-within{
+        .sidebar__svg-message {
+            display: none;
+        }
+        
+
+    }
+    
+}
+
+@media (min-width: $width-tablet) {
+    .sidebar {
+        &__btn svg {
+            left: 40%;
+        }
     }
 }
+
+@media (min-width: $width-desktop) {}

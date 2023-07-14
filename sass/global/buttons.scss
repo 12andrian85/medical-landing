@@ -5,27 +5,30 @@ button {
     // padding: 15px;
     
     font-family: $font-family;
-    font-size: 16px;
-    font-weight: 600;
-    color: $color-white;
+    // font-size: 16px;
+    // font-weight: 600;
+    // color: $color-white;
     
-    background-color: $color-secondary;
-    // border: 0;
-    outline: 0;
+    // background-color: $color-secondary;
+    // // border: 0;
+    // outline: 0;
 
     // manage all states
     &:hover {
-        // background-color: $color-green-dark;
+        background-color: $color-blue-dark;
     }
     
-    &:focus {}
-
+    &:focus {
+        
+    }
+    
     &:active {
-        // color: $color-green;
     }
     
     &:disabled {}
 }
+
+
 
 // .btn-small {}
 // .btn-medium {}

@@ -1,0 +1,343 @@
+.about {
+    // padding-top: 70px;
+}
+
+.about__col {
+    margin: 0 !important;
+}
+
+.about-bg {
+    position: absolute;
+    object-fit: cover;
+}
+
+.about-head {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-logo {
+    width: 200px;
+    margin: 30px 0;
+}
+
+.about-head--title {
+    padding: 40px 0;
+    font-weight: 700;
+}
+
+.about-head--text {
+    font-size: 1.3rem;
+    color: $color-grey-dark;
+}
+
+.about-statistic {
+    color: $color-grey-dark;
+    width: auto;
+}
+
+.about-numbers {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 10px 0;
+    color: $color-black;
+}
+
+.about-wrapper {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.about-foto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.col img {
+    object-fit: cover;
+}
+
+// achievements
+.about-achievements {
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-icon {
+        width: 50px;
+        padding: 20px 0;
+    }
+
+    .about-achievements--title {
+        font-weight: 600;
+    }
+
+    .about-achievements--text {
+        color: $color-grey;
+    }
+}
+
+// video
+.about-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-link {
+    position: relative;
+}
+
+.about-link::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $color-white;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-link:hover::after {
+    background-color: $color-secondary;
+}
+
+.about-link::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/about/play-svgrepo-com.svg);
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.about-link:hover::before {
+    color: white;
+    fill: white;
+    stroke: white;
+}
+
+//  awards
+.about-title {
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.about-link-reward {
+    text-decoration: none;
+    color: $color-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-link-reward span {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.about-reviews {
+    .reviews-title {
+        text-align: center;
+        font-weight: 600;
+        padding: 20px 40px;
+    }
+
+    .about-reviews-slider {
+        border: 1px solid grey;
+        border-radius: 15px;
+        box-shadow: 0px 1px 9px 0px $color-grey;
+    }
+
+    .reviews-inner {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 50px;
+
+        h5{
+            font-weight: 600;
+        }
+
+        .reviews-img {
+            height: 4rem;
+            border-radius: 45px;
+        }
+    }
+
+
+}
+
+// splide
+.splide {
+    // background-color: red;
+    .splide__slide{
+        align-items: start;
+        justify-content: start;
+    }
+    .splide__arrows {
+        position: relative;
+        top: 50px;
+    }
+
+    .splide__arrow:hover {
+        background-color: #6366f1;
+
+        .icon {
+            fill: white;
+        }
+    }
+
+    .splide__arrow--prev {
+        left: 75%;
+        position: absolute;
+    }
+
+    .splide__arrow--next {}
+
+}
+
+.card-text {
+    color: $color-grey;
+}
+
+.about-contact {
+    .row {
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%) !important;
+    }
+
+    .col {
+        background-image: url(/img/about/contact-bg.png);
+        background-size: cover;
+    }
+    .btn {
+        margin: 20px;
+        background-color: $color-white;
+        color: $color-black;
+        padding: 15px 50px;
+    }
+
+}
+
+.about-contact--block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    color: $color-white;
+    font-size: 22px;
+
+}
+
+.about-contact--email {
+    margin: 30px 0;
+    font-size: 33px;
+    color: $color-white;
+    text-decoration: underline;
+}
+
+.about-contact--email:hover {
+    text-decoration: none;
+}
+
+
+
+.btn:hover {
+    background-color: $color-grey-light;
+    color: $color-black;
+}
+
+.socials {
+    h2 {
+        font-weight: 600;
+        font-size: 1.8rem;
+        padding: 30px 0;
+    }
+
+    p {
+        color: $color-grey;
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (min-width: $width-tablet) {
+
+    .about-contact--block {
+        padding: 100px 0;
+    }
+
+    .about-reviews {
+
+        .reviews-title {
+            position: absolute;
+            text-align: start;
+            padding: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    }
+
+    .about-content {
+        background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+        opacity: 0.2;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+
+
+    }
+
+
+    .about-contact--email {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .about-bg {
+        position: absolute;
+        // width: 100%;
+    }
+
+    .socials {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+
+@media (min-width: $width-desktop) {
+
+    .splide {
+        .splide__arrow--prev {
+            left: 85%;
+            position: absolute;
+        }
+    }
+
+
+    .about-bg {
+        width: 100%;
+
+    }
+
+
+    .about-achievements {
+        .about-block {
+            border-right: 1px solid $color-grey;
+        }
+    }
+}

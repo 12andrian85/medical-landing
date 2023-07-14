@@ -32,9 +32,9 @@ input[type="password"],
 input[type="number"],
 input[type="tel"] {
     width: 100%;
-    padding: 10px 10px;
-    color: $color-text-base;
-    border: 2px solid $color-grey;
+    padding: 15px 10px;
+    color: $color-grey;
+    border: 1px solid $color-grey;
     border-radius: 10px;
 
     // Manage hover state
@@ -63,7 +63,7 @@ textarea {
     border-radius: 15px;
 }
 
-style custom radio and checkbox
+// style custom radio and checkbox
 input[type="radio"],
 input[type="checkbox"] {
     display: inline-flex;

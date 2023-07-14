@@ -1,13 +1,19 @@
-.reviews {
-    background-color: #F3F6FFFF;
+    // background-color: #F3F6FFFF;
+    .reviews{
 
-    &__title {
-        text-align: center;
-        padding: 50px;
-        font-weight: 700;
+        .reviews-title {
+            text-align: center;
+            padding: 50px;
+            font-weight: 700;
+        }
+        
+       
     }
 
     .splide {
+        &__slide{
+            flex-direction: column;
+        }
         .card {
             margin: 50px 10px 0px 10px;
             margin-top: 50px;
@@ -33,7 +39,7 @@
             content: "";
             width: 40px;
             height: 40px;
-            background-color: $color-secondary;
+            background-color: $color-primary;
             border-radius: 10px;
             top: -20px;
             left: 20px;
@@ -65,8 +71,11 @@
             }
         }
     }
-}
 
-@media (min-width: $width-tablet) {}
+@media (min-width: $width-tablet) {
+    .about-reviews{
+       
+    }
+}
 
 @media (min-width: $width-desktop) {}

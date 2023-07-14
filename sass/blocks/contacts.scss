@@ -1,0 +1,23 @@
+.contacts {
+    .label{
+        padding: 10px 0;
+        font-weight: 600;
+    }
+    
+    .svg-block{
+        padding: 5px;
+        height: max-content;
+        margin: 5px;
+    }
+    .icon-envelope {
+        height: 30px;
+        width: 30px;
+        stroke: $color-blue;
+    }
+    .icon-arrow{
+        height: 20px;
+        width: 15px;
+    }
+}
+
+

@@ -1,17 +1,20 @@
 .news {
-    &__title {
+    .news-title {
         text-align: center;
         font-weight: 600;
         margin: 50px 0;
     }
     .card-wrapper{
         text-decoration: none;
+        width: 100%;
     }
+   
     .card {
+        position: relative;
         margin: 10px;
         position: relative;
         text-decoration: none;
-        box-shadow: 0px 3px 10px 7px $color-grey-light;
+        box-shadow: 0px 3px 6px 3px $color-grey-light;
 
         .card-inner {
             display: flex;
@@ -20,9 +23,14 @@
                 color: $color-grey;
             }
         }
+       
         .card-title{
             font-weight: 700;
             padding: 30px 0;
+        }
+        .card-btn{
+            height: 30px;
+            background-color: $color-grey-light;
         }
         .card-title a{
             text-decoration: none;

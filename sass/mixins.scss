@@ -5,9 +5,9 @@
 }
 
 @mixin outline {
-    min-height: 50px;
+    // min-height: 50px;
+    // outline-style: dashed;   
     outline-color: tomato;
-    outline-style: dashed;
     outline-width: 1px;
 }
 
@@ -33,3 +33,4 @@
         padding: 100px 150px;
     }
 }
+

@@ -1,0 +1,15 @@
+.c-info{
+
+    .card{
+        position: relative;
+        border: 1px solid $color-grey;
+        .card-link{
+            text-decoration: none;
+        }
+    }
+    .card:hover{
+        bottom: 10px;
+        // transition: 0.1 linear;
+        animation:  1s forwards ;
+    }
+}

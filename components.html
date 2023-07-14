@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>cards</title>
+</head>
+
+<!-- svg-elements -->
+<!-- facebook -->
+<svg width="0" height="0" class="card__icon hidden">
+    <symbol fill="" version="1.0" id="icon-facebook" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" enable-background="new 0 0 8.672 18.944"
+        xml:space="preserve" viewBox="0 0 8.672 18.944">
+        <path fill="" d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+      H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+      C5.765,5.069,5.75,3.709,6.275,3.356z"></path>
+    </symbol>
+</svg>
+<!-- instagram -->
+<svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="instagram-svgrepo-com">
+        <rect x="0" fill="none" width="20" height="20"></rect>
+        <g>
+            <path
+                d="M12.7 10c0-1.5-1.2-2.7-2.7-2.7S7.3 8.5 7.3 10s1.2 2.7 2.7 2.7c1.5 0 2.7-1.2 2.7-2.7zm1.4 0c0 2.3-1.8 4.1-4.1 4.1S5.9 12.3 5.9 10 7.7 5.9 10 5.9s4.1 1.8 4.1 4.1zm1.1-4.3c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .5 1 1zM10 3.4c-1.2 0-3.7-.1-4.7.3-.7.3-1.3.9-1.5 1.6-.4 1-.3 3.5-.3 4.7s-.1 3.7.3 4.7c.2.7.8 1.3 1.5 1.5 1 .4 3.6.3 4.7.3s3.7.1 4.7-.3c.7-.3 1.2-.8 1.5-1.5.4-1.1.3-3.6.3-4.7s.1-3.7-.3-4.7c-.2-.7-.8-1.3-1.5-1.5-1-.5-3.5-.4-4.7-.4zm8 6.6v3.3c0 1.2-.4 2.4-1.3 3.4-.9.9-2.1 1.3-3.4 1.3H6.7c-1.2 0-2.4-.4-3.4-1.3-.8-.9-1.3-2.1-1.3-3.4V10 6.7c0-1.3.5-2.5 1.3-3.4C4.3 2.5 5.5 2 6.7 2h6.6c1.2 0 2.4.4 3.4 1.3.8.9 1.3 2.1 1.3 3.4V10z">
+            </path>
+        </g>
+    </symbol>
+</svg>
+<!-- twitter -->
+<svg width="0" height="0" class="hidden">
+    <symbol fill="" version="1.1" id="twitter-svgrepo-com" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="-271 296.6 256.4 208.4">
+        <path d="M-14.6,321.2c-9.4,4.2-19.6,7-30.2,8.3c10.9-6.5,19.2-16.8,23.1-29.1c-10.2,6-21.4,10.4-33.4,12.8
+      c-9.6-10.2-23.3-16.6-38.4-16.6c-29,0-52.6,23.6-52.6,52.6c0,4.1,0.4,8.1,1.4,12c-43.7-2.2-82.5-23.1-108.4-55
+      c-4.5,7.8-7.1,16.8-7.1,26.5c0,18.2,9.3,34.3,23.4,43.8c-8.6-0.3-16.7-2.7-23.8-6.6v0.6c0,25.5,18.1,46.8,42.2,51.6
+      c-4.4,1.2-9.1,1.9-13.9,1.9c-3.4,0-6.7-0.3-9.9-0.9c6.7,20.9,26.1,36.1,49.1,36.5c-18,14.1-40.7,22.5-65.3,22.5
+      c-4.2,0-8.4-0.2-12.6-0.7c23.3,14.9,50.9,23.6,80.6,23.6c96.8,0,149.7-80.2,149.7-149.7c0-2.3,0-4.6-0.1-6.8
+      C-30.5,341-21.6,331.8-14.6,321.2"></path>
+    </symbol>
+</svg>
+<!-- linkedin -->
+<svg width="0" height="0" class=" card__icon hidden">
+    <symbol fill="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve" viewBox="0 0 512 512" id="linkedin-svgrepo-com">
+        <g id="7935ec95c421cee6d86eb22ecd125aef">
+            <path
+                d="M116.504,500.219V170.654H6.975v329.564H116.504
+          L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
+          C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219
+          c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
+          c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531
+          c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z">
+            </path>
+        </g>
+    </symbol>
+</svg>
+<!-- youtube -->
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.0" id="icon-youtube" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" enable-background="new 0 0 19.979 14.015"
+        xml:space="preserve" viewBox="0 0 19.979 14.015">
+        <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+      C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"></path>
+    </symbol>
+</svg>
+<!-- dribble -->
+<svg width="0" height="0" class="hidden">
+    <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 17 17" id="dribbble-svgrepo-com">
+        <path
+            d="M8.5 0c-4.694 0-8.5 3.806-8.5 8.5s3.806 8.5 8.5 8.5 8.5-3.806 8.5-8.5-3.806-8.5-8.5-8.5zM15.994 8.621c-2.075-0.456-3.896-0.423-5.469-0.092-0.251-0.627-0.536-1.273-0.849-1.93 1.681-0.648 3.292-1.586 4.548-2.934 1.106 1.308 1.776 2.994 1.776 4.835 0 0.041-0.006 0.080-0.006 0.121zM13.523 2.947c-1.16 1.257-2.688 2.135-4.297 2.74-0.76-1.468-1.69-2.96-2.814-4.385 0.664-0.193 1.363-0.302 2.088-0.302 1.934 0 3.692 0.742 5.023 1.947zM5.43 1.665c1.133 1.397 2.062 2.884 2.828 4.353-2.974 0.92-5.966 1.028-7.114 1.030 0.474-2.407 2.104-4.4 4.286-5.383zM1 8.5c0-0.151 0.014-0.3 0.022-0.449 0.065 0.001 0.134 0.001 0.212 0.001 1.306 0 4.402-0.125 7.482-1.114 0.3 0.625 0.578 1.245 0.82 1.844-3.605 1.101-5.736 3.705-6.513 4.826-1.251-1.34-2.023-3.133-2.023-5.108zM3.758 14.304c0.596-0.901 2.601-3.518 6.145-4.57 0.961 2.598 1.405 4.744 1.566 5.651-0.911 0.394-1.914 0.615-2.969 0.615-1.798 0-3.449-0.637-4.742-1.696zM12.4 14.894c-0.198-1.063-0.636-3.042-1.503-5.405 1.444-0.28 3.109-0.288 5.008 0.145-0.341 2.226-1.658 4.129-3.505 5.26z"
+            fill=""></path>
+    </symbol>
+</svg>
+<!-- home -->
+<svg width="0" height="0" class="hidden">
+    <symbol fill="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="home-svgrepo-com">
+        <title>home</title>
+        <path
+             d="M30.488 13.431l-14-12c-0.13-0.112-0.301-0.18-0.488-0.18s-0.358 0.068-0.489 0.181l0.001-0.001-14 12c-0.161 0.138-0.262 0.342-0.262 0.569v16c0 0.414 0.336 0.75 0.75 0.75h28c0.414-0 0.75-0.336 0.75-0.75v0-16c-0-0.227-0.101-0.431-0.261-0.569l-0.001-0.001zM11.75 29.25v-5.25c0-2.347 1.903-4.25 4.25-4.25s4.25 1.903 4.25 4.25v0 5.25zM29.25 29.25h-7.5v-5.25c0-3.176-2.574-5.75-5.75-5.75s-5.75 2.574-5.75 5.75v0 5.25h-7.5v-14.905l13.25-11.356 13.25 11.356z">
+        </path>
+    </symbol>
+</svg>
+<!-- dooble arrow -->
+<svg width="0" height="0" class="hidden">
+    <symbol fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="double-right-svgrepo-com">
+      <path d="M10.2772 18.4623C9.9802 18.751 9.97351 19.2258 10.2623 19.5228C10.551 19.8198 11.0258 19.8265 11.3228 19.5377L10.2772 18.4623ZM18 12L18.5228 12.5377C18.6681 12.3965 18.75 12.2026 18.75 12C18.75 11.7974 18.6681 11.6035 18.5228 11.4623L18 12ZM11.3228 4.46225C11.0258 4.17351 10.551 4.1802 10.2623 4.47719C9.97351 4.77418 9.9802 5.24901 10.2772 5.53775L11.3228 4.46225ZM5.47721 17.2952C5.18021 17.584 5.17351 18.0588 5.46224 18.3558C5.75097 18.6528 6.2258 18.6595 6.52279 18.3708L5.47721 17.2952ZM12 12L12.5228 12.5378C12.668 12.3965 12.75 12.2026 12.75 12C12.75 11.7974 12.668 11.6035 12.5228 11.4622L12 12ZM6.52279 5.62924C6.2258 5.34051 5.75097 5.34721 5.46224 5.64421C5.17351 5.9412 5.18021 6.41603 5.47721 6.70476L6.52279 5.62924ZM11.3228 19.5377L18.5228 12.5377L17.4772 11.4623L10.2772 18.4623L11.3228 19.5377ZM18.5228 11.4623L11.3228 4.46225L10.2772 5.53775L17.4772 12.5377L18.5228 11.4623ZM6.52279 18.3708L12.5228 12.5378L11.4772 11.4622L5.47721 17.2952L6.52279 18.3708ZM12.5228 11.4622L6.52279 5.62924L5.47721 6.70476L11.4772 12.5378L12.5228 11.4622Z" fill=""></path>
+    </symbol>
+  </svg>
+
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex" href="index.html">
+                    <img src="img/logo.svg" alt="Bootstrap" width="50" height="34">
+                    <h2 class="navbar-brand-title">Silicon</h2>
+                </a>
+                <div class="d-flex d-lg-none">
+                    <form class="form d-none d-md-flex align-items-center" role="search">
+                        <span class="form-text d-none d-md-flex">Light</span>
+                        <input class="form-control me-2" type="checkbox" placeholder="Search" aria-label="Search">
+                        <span class="form-text  d-none d-md-flex">Dark</span>
+                        <button class=" d-none d-lg-flex btn btn-outline-success" type="submit">Buy now</button>
+                    </form>
+                    <button class=" order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <h2 class="navbar-menu">Menu</h2>
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px-;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Landings
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sidebar.html">Sidebar</a></li>
+                                <li><a class="dropdown-item" href="about.html">about</a></li>
+                                <li><a class="dropdown-item" href="components.html">components</a></li>
+                                <li><a class="dropdown-item" href="portholio.html">Potfolio Grid</a></li>
+                                <li><a class="dropdown-item" href="contacts.html">Contact Us</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">UI Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="form d-none d-lg-flex align-items-center" role="search">
+                    <span class="form-text  d-none d-md-flex">Light</span>
+                    <input class="form-control me-2" type="checkbox" placeholder="Search" aria-label="Search">
+                    <span class="form-text  d-none d-md-flex">Dark</span>
+                    <button class="btn btn-nav btn-outline-success" type="submit">Buy now</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- the prefix 'c-' is to define component classes -->
+    <!-- c-breadcrumb -->
+    <div class="c-breadcrumb" style="margin-top: 95px;">
+        <div class="row">
+            <div class="col">
+                <a class="home   text text-decoration-none" href="">
+                    <svg class="icon ">
+                        <use xlink:href="#home-svgrepo-com"></use>
+                    </svg>
+                    Home
+                </a>
+                <span class="link text-primary  mx-2 text-decoration-none">
+                    <svg class="icon">
+                        <use xlink:href="#double-right-svgrepo-com"></use>
+                      </svg>
+                    link</span>
+                <link>
+            </div>
+        </div>
+        <!-- component card-person -->
+        <div class="c-card-person">
+            <div class="card">
+                <div class="card-img">
+                    <img src="/img/21.jpg" class="card-img-top" alt="...">
+                    <div class="card-block">
+                        <div class="card-social">
+                            <a class="card-socials">
+                                <svg class="card-icon">
+                                    <use xlink:href="#icon-facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="card-socials">
+                                <svg class="card-icon">
+                                    <use xlink:href="#linkedin-svgrepo-com"></use>
+                                </svg>
+                            </a>
+                            <a class="card-socials">
+                                <svg class="card-icon">
+                                    <use xlink:href="#twitter-svgrepo-com"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Dr. Annette Black</h5>
+                    <p class="card-text">Pediatrician</p>
+                    <div class="card-stars">
+                        <span class="card-star">
+                            <img src="/img/star.svg" alt="">
+                        </span>
+                        <span class="card-star">
+                            <img src="/img/star.svg" alt="">
+                        </span>
+                        <span class="card-star">
+                            <img src="/img/star.svg" alt="">
+                        </span>
+                        <span class="card-star">
+                            <img src="/img/star.svg" alt="">
+                        </span>
+                        <span class="card-star">
+                            <img src="/img/star-1.svg" alt="">
+                        </span>
+                        <span class="card-star"></span>
+                        <span>(10 reviews)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- video-block -->
+        <div class="c-video py-3">
+            <video controls muted width="500px" src="/img/20220421_154913.mp4">
+                <source src="/img/20220421_154913.mp4">
+                <source src="/img/20220421_154913.WebM">
+            </video>
+        </div>
+
+        <!-- <c-address> -->
+        <div class="address p-3">
+            <h2 class="address-title">Medical Center</h2>
+            <ul class="address-list">
+                <li class="address-item address-item--location">
+                    <span>445 Bayshor Blvd, San Francisco, CA 94124</span>
+                </li>
+                <li class="address-item address-item--tel">
+                    <span>(406) 555-0120</span>
+                </li>
+                <li class="address-item address-item--time">
+                    <span>
+                        <strong>Mon - Fri</strong>: 9:00 am - 22:00 am <br>
+                    </span>
+                    <span>
+                        <strong>Sat - Sun:</strong>: 9:00 am - 20:00 am
+                    </span>
+                </li>
+                <li class="address-item address-item--mail">examle@emaul.com</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-lg">Make an appointment</button>
+        </div>
+
+        <!-- c-social-icon -->
+        <div class="c-social">
+            <a class="social-item social-item--facebook">
+                <svg class="card-icon">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            </a>
+            <a class="social-item social-item--instagram">
+                <svg class="card-icon">
+                    <use xlink:href="#instagram-svgrepo-com"></use>
+                </svg>
+            </a>
+            <a class="social-item social-item--twitter">
+                <svg class="card-icon">
+                    <use xlink:href="#twitter-svgrepo-com"></use>
+                </svg>
+            </a>
+            <a class="social-item social-item--linkedin">
+                <svg class="card-icon">
+                    <use xlink:href="#linkedin-svgrepo-com"></use>
+                </svg>
+            </a>
+            <a class="social-item social-item--youtube">
+                <svg class="card-icon">
+                    <use xlink:href="#icon-youtube"></use>
+                </svg>
+            </a>
+        </div>
+
+        <!-- badges -->
+        <div class="c-badges my-5">
+            <a class="badges-item badges-item--blue" href="">Digital</a>
+            <a class="badges-item badges-item--yellow" href="">buisiness</a>
+            <a class="badges-item badges-item--red" href="">technology</a>
+            <a class="badges-item badges-item--green" href="">startups</a>
+        </div>
+
+        <!-- stats -->
+        <div class="c-stats my-5">
+            <span class="stats-date">sep 3.2021</span>
+            <span class="stats-number"><button type="button" class="stats-btn stats-btn--like"></button>8</span>
+            <span class="stats-number"><button type="button" class="stats-btn stats-btn--message"></button>7</span>
+            <span class="stats-number"><button type="button" class="stats-btn stats-btn--share"></button>3</span>
+        </div>
+
+        <!-- social-networks -->
+        <div class="c-networks my-5">
+            <div class="networks-block">
+                <a class="networks-item networks-item--facebook">
+                    <svg class="card-icon">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                </a>
+                <h5>Facebook</h5>
+                <span>@silicon</span>
+            </div>
+            <div class="networks-block">
+                <a class="networks-item networks-item--instagram">
+                    <svg class="card-icon">
+                        <use xlink:href="#instagram-svgrepo-com"></use>
+                    </svg>
+                </a>
+                <h5>instagram</h5>
+                <span>@silicon</span>
+            </div>
+            <div class="networks-block">
+                <a class="networks-item networks-item--twitter">
+                    <svg class="card-icon">
+                        <use xlink:href="#twitter-svgrepo-com"></use>
+                    </svg>
+                </a>
+                <h5>twitter</h5>
+                <span>@silicon</span>
+            </div>
+            <div class="networks-block">
+                <a class="networks-item networks-item--linkedin">
+                    <svg class="card-icon">
+                        <use xlink:href="#linkedin-svgrepo-com"></use>
+                    </svg>
+                </a>
+                <h5>linkedin</h5>
+                <span>@silicon</span>
+            </div>
+            <div class="networks-block d-lg-block d-md-none ">
+                <a class="networks-item networks-item--youtube">
+                    <svg class="card-icon">
+                        <use xlink:href="#icon-youtube"></use>
+                    </svg>
+                </a>
+                <h5>youtube</h5>
+                <span>@silicon</span>
+            </div>
+            <div class="networks-block d-lg-block d-md-none ">
+                <a class="networks-item networks-item--dribbble">
+                    <svg class="card-icon">
+                        <use xlink:href="#dribbble-svgrepo-com"></use>
+                    </svg>
+                </a>
+                <h5>dribbble</h5>
+                <span>@silicon</span>
+            </div>
+        </div>
+
+        <!-- consulting-block -->
+        <div class="c-consulting my-5">
+            <div class="consulting-inner d-flex">
+                <div class="">
+                    <div class="consulting-cell consulting-cell--digital">
+                        <p>Digital transformation</p>
+                        <span>Aliquam quis odio senectus.</span>
+                    </div>
+                    <div class="consulting-cell consulting-cell--services">
+                        <p>Marketing & sales</p>
+                        <span>At faucibus molestie egestas sed.</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="consulting-cell consulting-cell--sales">
+                        <p>Analytics services</p>
+                        <span>Curabitur neque ut morbi sapien.</span>
+                    </div>
+                    <div class="consulting-cell consulting-cell--strategy">
+                        <p>Cybersecurity & strategy</p>
+                        <span>Orci bibendum ullamcorper lorem.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- c-my-card -->
+        <div class="c-my-card card-block my-5">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="img-block col-md-4">
+                        <a href="">
+                            <img src="/img/02 (1).jpg" class="img-fluid rounded-start" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="c-badges ">
+                                <a class="badges-item badges-item--yellow" href="">Digital</a>
+                            </div>
+                            <a href="card-inner">
+                                <h5 class="card-title">
+                                    5 Bad Landing Page Examples & How We Would Fix Theme
+                                </h5>
+                            </a>
+                            <p class="card-text">
+                                Nunc aliquet scelerisque pellentesque imperdiet tortor elit,
+                                dictum. Tristique odio at dignissim viverra aliquet eleifend erat.
+                                Tellus, at arcu, egestas praesen
+                            </p>
+                            <div class="c-stats my-5">
+                                <span class="stats-date">sep 3.2021</span>
+                                <span class="stats-number"><button type="button"
+                                        class="stats-btn stats-btn--like"></button>8</span>
+                                <span class="stats-number"><button type="button"
+                                        class="stats-btn stats-btn--message"></button>7</span>
+                                <span class="stats-number"><button type="button"
+                                        class="stats-btn stats-btn--share"></button>3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- technology-block -->
+        <div class="c-technology m-2">
+            <a href="" class="technology-inner">
+                <div class="technology-block">
+                    <h3 class="technology-title">Radiology</h3>
+                    <p class="technology-text">
+                        Faucibus cursus maecenas lorem cursus nibh.
+                    </p>
+                    <span class="technology-link">Learn moree</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- card-info -->
+        <div class="c-info">
+            <div class="row">
+                <!-- item -->
+                <div class="info-item col-12 col-md-4 d-lg-flex ">
+                    <a href="" class="card-inner">
+                        <div
+                            class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
+                            <img src="/img/doctor.svg" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Find a Doctor</h3>
+                                <p class="card-text">Some quick example text to build
+                                </p>
+                                <a href="" class="card-link">See all doctors</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- item -->
+                <div class="info-item col-12 col-md-4 d-lg-flex fl">
+                    <a href="" class="card-inner">
+                        <div
+                            class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
+                            <img src="/img/doctor.svg" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Find a Doctor</h3>
+                                <p class="card-text">Some quick example text to build
+                                </p>
+                                <a href="" class="card-link">See all doctors</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- item -->
+                <div class="info-item col-12 col-md-4 d-lg-flex fl">
+                    <a href="" class="card-inner">
+                        <div
+                            class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
+                            <img src="/img/doctor.svg" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Find a Doctor</h3>
+                                <p class="card-text">Some quick example text to build
+                                </p>
+                                <a href="" class="card-link">See all doctors</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- reviews -->
+        <div class="c-reviews">
+            <ul class="list-unstyled">
+                <li class="reviews__item">
+                    <div class="card" style="width: 17rem;">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Etiam augue ante, imperdiet et nunc sed,
+                                bibendum faucibus est. Suspendisse egestas
+                                facilisis erat eu eleifend.
+                            <div class="card-stars d-flex">
+                                <img src="/img/star.svg" alt="">
+                                <img src="/img/star.svg" alt="">
+                                <img src="/img/star.svg" alt="">
+                                <img src="/img/star.svg" alt="">
+                                <img src="/img/star.svg" alt="">
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reviews__inner">
+                        <img class="reviews__img" src="/img/32.jpg" alt="">
+                        <div class="reviews__text">
+                            <h5>Jerome Bell</h5>
+                            <span>Medical Center patient</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="div" style="height: 200px;"></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script src="./js/script.js"></script>
+</body>
+
+</html>

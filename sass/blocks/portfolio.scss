@@ -1,0 +1,177 @@
+.portfolio {
+    margin-top: 76px;
+
+    .sub-menu {
+        text-decoration: none;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sub-menu a {
+    text-decoration: none;
+    color: $color-black;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+
+.sub-menu-border {
+    border-bottom: 1px solid $color-blue-light;
+    color: $color-blue;
+}
+
+.sub-menu a:hover {
+    color: $color-blue;
+}
+
+.splide {
+    width: 100%;
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card-subtitle {
+    opacity: 0;
+}
+
+
+
+.card-img-top {
+    object-fit: cover;
+    transition: 1s;
+    display: block;
+    //     max-width: 100%;
+    //     vertical-align: middle;
+}
+
+.card:hover {
+    .card-subtitle {
+        transition: opacity .55s ease-in-out;
+        opacity: 1;
+    }
+
+    .card-img-top {
+        transform: scale(1.2);
+    }
+
+    .stretched-link {
+        color: $color-blue;
+    }
+}
+
+.stretched-link {
+    color: $color-black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+.pagination {
+    .icon:hover {
+        fill: $color-blue-light
+    }
+
+    .page-link {
+        color: $color-black;
+    }
+
+    .page-link:hover {
+        color: $color-blue-light
+    }
+
+    .page-item--active {
+        color: white;
+    }
+}
+
+.new-level {
+    .row {
+        background-color: #F3F6FFFF;
+    }
+
+    .content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .content-question {
+        color: $color-grey;
+        font-size: 1.4rem;
+
+    }
+
+    .content-title {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .btn {
+        margin: 0;
+        background-color: $color-blue;
+        color: $color-white;
+    }
+
+    .btn:hover {
+        color: $color-white;
+        background-color: $color-blue-dark;
+    }
+
+    .img {
+        width: 280px;
+
+    }
+}
+
+@media (min-width: $width-tablet) {
+    // .new-level {
+
+    .content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        text-align: start;
+    }
+
+    // }
+
+
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/portfolio/circle-svgrepo-com.svg);
+    background-position: 70px;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: $width-desktop) {
+    .new-level {
+
+        .img {
+            width: 400px;
+
+        }
+    }
+}

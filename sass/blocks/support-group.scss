@@ -1,9 +1,8 @@
 .support-group {
-    // position: relative;
+    position: relative;
     background-color: #F3F6FFFF;
     padding: 20px 0;
     margin-top: 100px;
-    position: relative;
 
     &__item {
         text-align: center;
@@ -26,7 +25,7 @@
     }
 
     .icon {
-        // fill: white;
+        fill: white;
         height: 10px;
     }
 
@@ -42,8 +41,11 @@
         border-radius: 20px;
         margin: 5px;
         border: none;
-        background-color: $color-white;
+        // background-color: $color-white;
         box-shadow: 0px 2px 4px 0px $color-grey;
+        .icon {
+            fill: $color-black;
+        }
     }
 
     &__btn::before {
@@ -70,7 +72,7 @@
     }
 
     .danger {
-        color: $color-danger;
+        // color: $color-danger;
     }
 
 
@@ -83,6 +85,16 @@
 
     &__item--body {
         padding-top: 250px;
+    }
+    &__button{
+        opacity: 0.8;
+        padding: 10px 30px;
+    }
+    button:hover{
+    // background-color: #EC2121FF;
+    box-shadow: none;
+    // color: white;
+    // border-color: #EC2121FF;
     }
 }
 

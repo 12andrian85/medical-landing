@@ -1,23 +1,23 @@
 .address {
     padding: 50px 0;
 
-    &__title {
+    .address-title {
         font-weight: 600;
     }
 
-    &__list {
+    .address-list {
         @include no-list-style;
         padding-left: 50px;
         color: $color-grey;
 
     }
 
-    &__item {
+    .address-item {
         position: relative;
         padding: 10px 0;
     }
 
-    &__item:before {
+    .address-item:before {
         position: absolute;
         content: "";
         width: 20px;
@@ -28,19 +28,19 @@
         background-size: cover;
     }
 
-    &__item--location:before {
+    .address-item--location:before {
         background-image: url("/img/location-pin-svgrepo-com.svg");
     }
 
-    &__item--tel:before {
+    .address-item--tel:before {
         background-image: url("/img/call-phone-ui-2-svgrepo-com.svg");
     }
 
-    &__item--time::before {
+    .address-item--time::before {
         background-image: url("/img/clock-svgrepo-com.svg");
     }
 
-    &__item--mail::before {
+    .address-item--mail::before {
         background-image: url("/img/message-svgrepo-com.svg");
 
     }
@@ -48,13 +48,17 @@
     .btn {
         padding: 15px;
         margin: 20px 0;
+        font-size: 16px;
+        box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(99,102,241,.9)
     }
 
     .btn:hover {
         background-color: $color-blue;
+        color: $color-white;
+        box-shadow: none;
     }
 
-    &__mapp {
+    &-mapp {
         margin-bottom: 50px;
         overflow: hidden;
         border-radius: 10px;
@@ -64,7 +68,7 @@
 
 @media (min-width: $width-tablet) {
     .address {
-        &__title {
+        .address-title {
             font-size: 2.3rem;
         }
     }
@@ -72,7 +76,7 @@
 
 @media (min-width: $width-desktop) {
     .address {
-        &__title {
+        .address-title {
             font-size: 3rem;
         }
     }
