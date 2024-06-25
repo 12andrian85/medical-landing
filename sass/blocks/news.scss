@@ -44,7 +44,9 @@
             padding: 20px;
             margin-top: 20px;
             border-top: 1px solid $color-grey-light;
+            overflow: hidden;
             .card-img{
+                object-fit: cover;
                 height: 55px;
                 width: 55px;
                 border-radius: 10px;
@@ -69,7 +71,7 @@
         top: 20px;
         right: 20px;
         overflow: hidden;
-        background-image: url("/img/bookmark-svgrepo-com.svg");
+        background-image: url("https://12andrian85.github.io/medical-landing/public/icons/bookmark-svgrepo-com.svg");
         background-size: 30px;
         background-position: center;
         background-repeat: no-repeat; 

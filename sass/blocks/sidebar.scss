@@ -46,7 +46,7 @@
         content: "";
         width: 40px;
         height: 40px;
-        background-image: url("/img/bookmark-svgrepo-com.svg");
+        background-image: url("https://12andrian85.github.io/medical-landing/public/icons/bookmark-svgrepo-com.svg");
         background-color: $color-grey-light;
         background-size: cover;
         background-position: center;
@@ -162,22 +162,22 @@
         &__btn {
             background-color: transparent;
             border: none;
-            background-image: url("/img/twitter-154-svgrepo-com.svg");
+            background-image: url("https://12andrian85.github.io/medical-landing/public/icons/twitter-154-svgrepo-com.svg");
             background-size: cover;
             height: 20px;
             width: 20px;
         }
 
         &__btn--like {
-            background-image: url("/img/like-svgrepo-com.svg");
+            background-image: url("https://12andrian85.github.io/medical-landing/public/icons/like-svgrepo-com.svg");
         }
 
         &__btn--message {
-            background-image: url("/img/message-square-svgrepo-com.svg");
+            background-image: url("https://12andrian85.github.io/medical-landing/public/icons/message-square-svgrepo-com.svg");
         }
 
         &__btn--share {
-            background-image: url("/img/share-android-svgrepo-com.svg");
+            background-image: url("https://12andrian85.github.io/medical-landing/public/icons/share-android-svgrepo-com.svg");
         }
     }
 
