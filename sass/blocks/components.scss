@@ -28,88 +28,88 @@
 .c-card-person {
     .card {
         align-items: center;
-        min-width: '50px';
-    }
+        min-width: 50px;
 
-    .card-star img {
-        height: 20px;
-        margin: 0 5px;
-    }
-
-    .card-stars {
-        display: flex;
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-title {
-        font-weight: 600;
-    }
-
-    .card-text {
-        color: $color-grey;
-    }
-
-    .card-socials img {
-        height: 15px;
-    }
-
-    .card-socials {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $color-white;
-        border-radius: 5px;
-        margin: 0 10px;
-    }
-
-    .card-socials:hover {
-        background-color: $color-secondary;
-        transition: 0.5s;
-
-        .card-icon {
-            fill: white;
+        .card-star img {
+            height: 20px;
+            margin: 0 5px;
         }
-    }
 
-    .card-img {
-        position: relative;
-    }
+        .card-stars {
+            display: flex;
+        }
 
-    .card-block {
-        position: absolute;
-        display: none;
-        height: 100%;
-        width: 100%;
-        top: 0;
-    }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .card-social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #5759e43b;
-        height: 100%;
-        width: 100%;
-    }
+        .card-title {
+            font-weight: 600;
+        }
 
-    .card-img:hover {
-        background-color: $color-secondary;
+        .card-text {
+            color: $color-grey;
+        }
+
+        .card-socials img {
+            height: 15px;
+        }
+
+        .card-socials {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-white;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        .card-socials:hover {
+            background-color: $color-primary;
+            transition: 0.3s;
+
+            .card-icon {
+                fill: white;
+            }
+        }
+
+        .card-img {
+            position: relative;
+        }
 
         .card-block {
-            display: block;
+            position: absolute;
+            display: none;
+            height: 100%;
+            width: 100%;
+            top: 0;
         }
-    }
 
-    .card-icon {
-        width: 20px;
-        height: 20px;
+        .card-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #5759e43b;
+            height: 100%;
+            width: 100%;
+        }
+
+        .card-img:hover {
+            background-color: $color-secondary;
+
+            .card-block {
+                display: block;
+            }
+        }
+
+        .card-icon {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 
@@ -122,41 +122,21 @@
 
     .address-list {
         @include no-list-style;
-        padding-left: 50px;
+        padding-left: 0;
 
     }
 
     .address-item {
         position: relative;
         padding: 10px 0;
-    }
 
-    .address-item:before {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: -30px;
-        transform: translate(-50%, -50%);
-        background-size: cover;
-    }
-
-    .address-item--location:before {
-        background-image: url("/img/location-pin-svgrepo-com.svg");
-    }
-
-    .address-item--tel:before {
-        background-image: url("/img/call-phone-ui-2-svgrepo-com.svg");
-    }
-
-    .address-item--time::before {
-        background-image: url("/img/clock-svgrepo-com.svg");
-    }
-
-    .address-item--mail::before {
-        background-image: url("/img/message-svgrepo-com.svg");
-
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            fill: #6C6FF2FF;
+            stroke: #6C6FF2FF;
+        }
     }
 
     .btn {
@@ -170,7 +150,7 @@
 }
 
 
-//  componentc- social-icon
+//  component c-social-icon
 .c-social {
     display: flex;
 
@@ -186,36 +166,54 @@
 
     .card-icon {
         height: 20px;
+        // fill: $color-black;
     }
 
-    .card-icon:hover {
-        fill: white;
 
-    }
 
     .social-item--facebook:hover {
         background-color: $color-blue-dark;
         box-shadow: 1px 3px 3px $color-blue-dark;
+
+        .card-icon {
+            fill: $color-white;
+        }
     }
 
     .social-item--instagram:hover {
         background-color: $color-primary;
         box-shadow: 1px 3px 3px $color-primary;
+
+        .card-icon {
+            fill: $color-white;
+        }
     }
 
     .social-item--twitter:hover {
         background-color: $color-blue-light;
         box-shadow: 1px 3px 3px $color-blue-light;
+
+        .card-icon {
+            fill: $color-white;
+        }
     }
 
     .social-item--linkedin:hover {
         background-color: $color-blue-dark;
         box-shadow: 1px 3px 3px $color-blue-dark;
+
+        .card-icon {
+            fill: $color-white;
+        }
     }
 
     .social-item--youtube:hover {
         background-color: $color-danger;
         box-shadow: 1px 3px 3px $color-danger;
+
+        .card-icon {
+            fill: $color-white;
+        }
     }
 }
 
@@ -223,32 +221,32 @@
 .c-badges {
     .badges-item {
         color: $color-white;
-        font-size: 14px;
+        font-size: 18px;
         text-decoration: none;
         text-transform: capitalize;
-        background-color: blue;
+        // background-color: blue;
         padding: 5px 10px;
         border-radius: 5px;
     }
 
     .badges-item--blue {
         background-color: $color-blue;
-        box-shadow: 1px 2px 3px $color-blue;
+        box-shadow: 0px 7px 8px 2px rgba(87, 89, 228, 0.3);
     }
 
     .badges-item--yellow {
         background-color: $color-yellow;
-        box-shadow: 1px 2px 3px $color-yellow;
+        box-shadow: 0px 7px 8px 2px rgba(251, 255, 12, 0.3);
     }
 
     .badges-item--red {
         background-color: $color-danger;
-        box-shadow: 1px 2px 3px $color-danger;
+        box-shadow: 0px 7px 8px 2px rgba(244, 37, 30, 0.3);
     }
 
     .badges-item--green {
         background-color: $color-green;
-        box-shadow: 1px 2px 3px $color-green;
+        box-shadow: 0px 7px 8px 2px rgba(0, 168, 87, 0.3);
     }
 }
 
@@ -307,12 +305,18 @@
         align-items: center;
         border-right: 1px solid $color-grey-light;
         padding: 0 60px;
+        text-decoration: none;
     }
 
     .networks-block h5 {
         font-weight: 600;
         margin: 20px 0;
         text-transform: capitalize;
+        color: $color-black;
+    }
+
+    .networks-block span {
+        color: $color-grey;
     }
 
     .networks-item {
@@ -332,40 +336,55 @@
         height: 25px;
     }
 
-    .networks-item--facebook:hover {
-        background-color: $color-blue;
-        box-shadow: 1px 3px 3px $color-blue;
-        fill: white;
+
+    .networks-block:hover {
+        .networks-item--facebook {
+            background-color: $color-blue;
+            box-shadow: 1px 3px 3px $color-blue;
+            fill: white;
+        }
     }
 
-    .networks-item--instagram:hover {
-        background-color: $color-blue-dark;
-        box-shadow: 1px 3px 3px $color-blue-dark;
-        fill: white;
+    .networks-block:hover {
+        .networks-item--instagram {
+            background-color: $color-blue-dark;
+            box-shadow: 1px 3px 3px $color-blue-dark;
+            fill: white;
+        }
     }
 
-    .networks-item--twitter:hover {
-        background-color: $color-blue-light;
-        box-shadow: 1px 3px 3px $color-blue-light;
-        fill: white;
+    .networks-block:hover {
+        .networks-item--twitter {
+            background-color: $color-blue-light;
+            box-shadow: 1px 3px 3px $color-blue-light;
+            fill: white;
+        }
     }
 
-    .networks-item--linkedin:hover {
-        background-color: $color-primary;
-        box-shadow: 1px 3px 3px $color-secondary;
-        fill: white;
+    .networks-block:hover {
+        cursor: pointer;
+
+        .networks-item--linkedin {
+            background-color: $color-primary;
+            box-shadow: 1px 3px 3px $color-secondary;
+            fill: white;
+        }
     }
 
-    .networks-item--youtube:hover {
-        background-color: $color-danger;
-        box-shadow: 1px 3px 3px $color-danger;
-        fill: white;
+    .networks-block:hover {
+        .networks-item--youtube {
+            background-color: $color-danger;
+            box-shadow: 1px 3px 3px $color-danger;
+            fill: white;
+        }
     }
 
-    .networks-item--dribbble:hover {
-        background-color: $color-pink;
-        box-shadow: 1px 3px 3px $color-pink;
-        fill: white;
+    .networks-block:hover {
+        .networks-item--dribbble {
+            background-color: $color-pink;
+            box-shadow: 1px 3px 3px $color-pink;
+            fill: white;
+        }
     }
 
     // }
@@ -463,6 +482,10 @@
         position: relative;
     }
 
+    .img-block:hover::before {
+        background-color: $color-grey-light;
+    }
+
     .img-block::before {
         position: absolute;
         content: "";
@@ -486,7 +509,7 @@
 
     .technology-block {
         position: relative;
-        height: 100%;
+        min-height: 165px;
         padding-left: 90px;
         text-decoration: none;
     }
@@ -502,7 +525,7 @@
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: center;
-        
+
 
     }
 
@@ -524,7 +547,8 @@
     .technology-link {
         position: relative;
     }
-    .svg-icon{
+
+    .svg-icon {
         fill: #6366f1;
         width: 20px;
         height: 20px;
@@ -552,6 +576,9 @@
         .card-inner {
             text-decoration: none;
             color: $color-black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .card-inner p {
@@ -576,19 +603,21 @@
             position: relative;
         }
 
+        .card-text--call {
+            width: max-content;
+        }
+
         .card-text--call::before {
             position: absolute;
             content: "";
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             background-image: url("/img/call-phone-ui-2-svgrepo-com.svg");
-            // background-color: red;
             background-size: cover;
             top: 50%;
             transform: translateY(-50%);
-            left: 0;
-            fill: red;
-            color: red;
+            left: -35px;
+
         }
     }
 

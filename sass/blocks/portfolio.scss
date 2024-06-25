@@ -37,10 +37,13 @@
 }
 
 .card-subtitle {
+    align-self: flex-start;
     opacity: 0;
 }
 
-
+.card{
+    align-items: start;
+}
 
 .card-img-top {
     object-fit: cover;

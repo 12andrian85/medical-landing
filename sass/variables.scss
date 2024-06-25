@@ -11,10 +11,11 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-green: rgb(0, 168, 87);
 $color-yellow: rgb(221, 225, 11);
-$color-blue: #5759E4FF;
-$color-blue-light: #1DA1F2FF;
-$color-blue-dark: rgb(64, 66, 142);
+$color-blue: rgba(15, 82, 237, 0.893);
+$color-blue-light: rgba(57, 111, 236, 0.893);
+$color-blue-dark: rgba(10, 49, 138, 0.893);
 $color-pink: #EA4C89FF;
+$color-shadow: rgba(0, 0, 0, 0.1);
 
 $color-danger: #f4251e;
 
@@ -24,5 +25,9 @@ $font-family: 'Open Sans', sans-serif;
 
 $width-mobile: 320px;
 $width-tablet: 768px;
+$width-large: 992px;
 $width-desktop: 1200px;
 
+$box-shadow-sm: 0 5px 5px rgba(0,0,0, .2);
+$box-shadow-md: 0 10px 10px rgba(0,0,0, .2);
+$box-shadow-lg: 0 15px 15px rgba(0,0,0, .2);

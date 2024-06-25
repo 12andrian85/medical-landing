@@ -7,6 +7,8 @@
        margin-bottom: 2px;
         width: 20px;
         height: 20px;
+        margin-top: 2px;
+
 
     }
 
@@ -22,10 +24,7 @@
     }
 
     .specialists-btn {
-        background-color: $color-white;
-        border: 1px solid $color-secondary;
         color: $color-primary;
-        padding-right: 30px;
     }
 
     .specialists-btn:hover {
@@ -81,9 +80,7 @@
         background-color: $color-white;
         border-radius: 5px;
         margin: 0 10px;
-         .card__icon {
-            fill: white;
-        }
+      
     }
 
     .card-socials:hover {

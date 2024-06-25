@@ -5,7 +5,7 @@
         font-weight: 600;
     }
 
-    .address-list {
+    .addres-list {
         @include no-list-style;
         padding-left: 50px;
         color: $color-grey;
@@ -53,8 +53,8 @@
     }
 
     .btn:hover {
-        background-color: $color-blue;
-        color: $color-white;
+        // background-color: $color-blue;
+        // color: $color-white;
         box-shadow: none;
     }
 
@@ -62,7 +62,7 @@
         margin-bottom: 50px;
         overflow: hidden;
         border-radius: 10px;
-        box-shadow: 0px 3px 10px 0px $color-grey;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
     }
 }
 

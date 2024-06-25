@@ -16,7 +16,7 @@
 </head>
 <!-- svg-elements -->
 <!-- home -->
- <svg width="0" height="0" class="hidden">
+<svg width="0" height="0" class="hidden">
     <symbol fill="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="home-svgrepo-com">
         <title>home</title>
         <path fill=""
@@ -41,7 +41,7 @@
 <svg width="0" height="0" class="hidden">
     <symbol fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close-svgrepo-com">
         <!-- <rect width="24-" height="24-" fill="#000000" stroke=""></rect> -->
-    <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path> -->
+        <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path> -->
         <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
     </symbol>
 </svg>
@@ -49,10 +49,10 @@
 <svg width="0" height="0" class="hidden">
     <symbol fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close-svgrepo-coms">
         <!-- <rect width="24-" height="24-" fill="#000000" stroke=""></rect> -->
-         <path d="M7 17L16.8995 7.10051" stroke="" stroke-linecap="round" stroke-linejoin="round"></path> -->
+        <path d="M7 17L16.8995 7.10051" stroke="" stroke-linecap="round" stroke-linejoin="round"></path> -->
         <path d="M7 7.00001L16.8995 16.8995" stroke="" stroke-linecap="round" stroke-linejoin="round"></path>
     </symbol>
-</svg> 
+</svg>
 <!-- check -->
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check-svgrepo-com (1)">
@@ -60,7 +60,7 @@
             d="M17.0303 8.78039L8.99993 16.8107L5.4696 13.2804L6.53026 12.2197L8.99993 14.6894L15.9696 7.71973L17.0303 8.78039Z"
             fill="blue"></path>
     </symbol>
-</svg> 
+</svg>
 
 <!-- message -->
 <svg width="0" height="0" class="hidden">
@@ -81,121 +81,140 @@
 
 <body class="m-0 p-0">
     <!-- header (navigation) -->
-    <header class="header bg-black-light" style="height: 50px;">
-        <nav class="navbar navbar-expand-lg bg-black-light">
+    <header class="header">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex text-light" href="index.html">
+                <a class="navbar-brand d-flex" href="index.html">
                     <img src="img/logo.svg" alt="Bootstrap" width="50" height="34">
                     <h2 class="navbar-brand-title">Silicon</h2>
                 </a>
                 <div class="d-flex d-lg-none">
-                    <form class="form d-none d-md-flex align-items-center" role="search">
-                        <span class="form-text d-none d-md-flex text-white">Light</span>
-                        <input class="form-control me-2" type="checkbox" placeholder="Search" aria-label="Search">
-                        <span class="form-text  d-none d-md-flex text-white">Dark</span>
+                    <form class="form d-flex align-items-center" role="search">
+                        <div class="form-check form-switch d-flex align-items-center px-1 pt-1 m-0">
+                            <label class="d-none d-md-block fw-bolder me-2" for="checked">Light</label>
+                            <input class="m-0 form-check-input fs-3" type="checkbox" role="switch" id="checked" checked>
+                            <label class="d-none d-md-block fw-bolder ms-2" for="checked">Darck</label>
+                        </div>
                         <button class=" d-none d-lg-flex btn btn-outline-success" type="submit">Buy now</button>
                     </form>
-                    <button class=" order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar__toggle order-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fs-3"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px-;">
+                    <ul class="navbar-nav  me-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item dropdown">
-                            <a class="nav-link nav-link-white  dropdown-toggle active" href="" role="button" data-bs-toggle="dropdown"
+                            <div
+                                class="w-100 d-flex d-lg-none align-items-center justify-content-between border-bottom border-lg-0">
+                                <h2 class="fs-3 fw-bolder py-3 m-0">Menu</h2>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Landings
                             </a>
-                            <ul class="dropdown-menu bg-black-light">
-                                <li><a class="dropdown-item text-light" href="sidebar.html">Sidebar</a></li>
-                                <li><a class="dropdown-item text-light" href="about.html">about</a></li>
-                                <li><a class="dropdown-item text-light" href="portholio.html">Potfolio Grid</a></li>
-                                <li><a class="dropdown-item text-light" href="services.html">Services</a></li>
-                                <li><a class="dropdown-item text-light" href="contacts.html">Contact Us</a></li>
-                                <li><a class="dropdown-item text-light" href="pricing.html">Pricing</a></li>
-                                <li><a class="dropdown-item text-light" href="components.html">Componenets</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="sidebar.html">Sidebar</a></li>
+                                <li><a class="dropdown-item" href="about.html">about</a></li>
+                                <li><a class="dropdown-item" href="portholio.html">Potfolio Grid</a></li>
+                                <li><a class="dropdown-item" href="services.html">Services</a></li>
+                                <li><a class="dropdown-item" href="contacts.html">Contact Us</a></li>
+                                <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                                <li><a class="dropdown-item" href="components.html">Componenets</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link nav-link-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Pages
                             </a>
-                            <ul class="dropdown-menu bg-black-light">
-                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown bg-black-light">
-                            <a class="nav-link nav-link-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Account
                             </a>
-                            <ul class="dropdown-menu bg-black-light">
-                                <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-white">UI Kit</a>
+                            <a class="nav-link">UI Kit</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-white">Docs</a>
+                        <li class="nav-item border-bottom">
+                            <a class="nav-link">Docs</a>
                         </li>
+                        <button class=" d-lg-none btn btn-burger btn-primary  m-3 mb-0" type="submit">Buy nowv</button>
                     </ul>
                 </div>
 
                 <form class="form d-none d-lg-flex align-items-center" role="search">
-                    <span class="form-text text-light d-none d-md-flex">Light</span>
+                    <label class="form-text  d-none d-md-flex" for="flexSwitchCheck">Light</label>
                     <div class="form-check form-switch d-flex align-items-center px-1">
-                        <input class=" m-0 ps-2 form-check-input" type="checkbox" role="switch"
-                            id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                        <input class=" m-0 mt-1 ps-2 form-check-input" type="checkbox" role="switch"
+                            id="flexSwitchCheck" checked>
+                        <label class="form-check-label" for="flexSwitchCheck"></label>
                     </div>
-                    <span class="form-text text-light  d-none d-md-flex">Dark</span>
-                    <button class="btn btn-nav btn-outline-success" type="submit">Buy now</button>
+                    <label class="form-text  d-none d-md-flex" for="flexSwitchCheck">Dark</label>
+                    <button class="btn btn-nav btn-primary ms-4" type="submit">Buy now</button>
                 </form>
             </div>
         </nav>
     </header>
     <!-- main -->
     <main class="pricing pt-5-">
+        <div class="backdrop d-lg-none"></div>
         <div class="title bg-black-light text-center pt-5">
-        <!-- breadcrumb -->
-        <div class="c-breadcrumb text-lg-start">
-            <div class="row">
-                <div class="col">
-                    <a class="home   text text-decoration-none .text-secondary-emphasis" href="">
-                        <svg class="icon">
-                            <use xlink:href="#home-svgrepo-com"></use>
-                        </svg>
-                        Home
-                    </a>
-                    <span class="link text-light mx-2 text-decoration-none">
-                        <svg class="icon">
-                            <use xlink:href="#double-right-svgrepo-com"></use>
-                        </svg>
-                        pricing</span>
-                    <link>
+            <!-- breadcrumb -->
+            <div class="c-breadcrumb text-lg-start">
+                <div class="row">
+                    <div class="col">
+                        <a class="home   text text-decoration-none .text-secondary-emphasis" href="">
+                            <svg class="icon">
+                                <use xlink:href="#home-svgrepo-com"></use>
+                            </svg>
+                            Home
+                        </a>
+                        <span class="link text-light mx-2 text-decoration-none">
+                            <svg class="icon">
+                                <use xlink:href="#double-right-svgrepo-com"></use>
+                            </svg>
+                            pricing</span>
+                        <link>
+                    </div>
                 </div>
             </div>
+            <h1 class="text-light py-4 py-lg-5 fw-bold">Transparent Pricing for You</h1>
+
+
+            <form class="form d-flex align-items-center justify-content-center" role="search">
+                <div class="form-check form-switch d-flex align-items-center px-1 pt-1 m-0">
+                    <label class=" fw-bolder me-2 text-white" for="chec">Montly</label>
+                    <input class="m-0 form-check-input fs-3" type="checkbox" role="switch" id="chec" checked>
+                    <label class=" fw-bolder ms-2 text-white position-relative" for="chec">
+                        Annually
+                        <span class="text-danger fs-xs fw-semibold top-0 position-absolute">-20</span>
+                    </label>
+                </div>
+            </form>
         </div>
-        <h1 class="text-light py-4 py-lg-5 fw-bold">Transparent Pricing for You</h1>
-            <div class="d-flex align-items-center justify-content-center">
-                <label class="check-label me-2 text-white fw-bold" for="check">Montly</label>
-                <input class="check-input m-0" type="checkbox" id="check">
-                <label class="check-label ms-2 text-light fw-bold position-relative" for="check">
-                    Annually
-                    <span class="text-danger fs-xs fw-semibold top-0 position-absolute">-20</span>
-                </label>
-            </div>
-        </div>
+
         <!-- pricing card -->
         <div class="container" style="height: 200px;">
-             
+
             <section class="table-responsive-lg position-relative rounded" style="top: -260px;">
                 <div class="d-flex align-items-center ">
                     <div class="bg-transparent" style="width: 32%; min-width: 16rem;">
@@ -206,10 +225,10 @@
                                     <p class="card-text fs-5">Best for growing teams</p>
                                 </div>
                                 <div class="text-center my-3">
-                                    <h3 class="fw-bold fs-3">$25</h3>
+                                    <h3 class="fw-bold fs-2"><span style="font-size: 35px;">$</span>25</h3>
                                     <p class="fs-5 mb-5">per month</p>
                                 </div>
-                                <a href="#" class="btn btn-block btn-lg border-secondary">Get stardet now</a>
+                                <a href="#" class="btn btn-outline-primary btn-lg">Get stardet now</a>
                             </div>
                         </div>
                     </div>
@@ -218,13 +237,13 @@
                             <div class="card-body border rounded w-100 py-5">
                                 <div class="text-center my-3 text-light">
                                     <h5 class="card-title fw-bold fs-3">Team</h5>
-                                    <p class="card-text fs-5 ">Best for small teams</p>
+                                    <p class="card-text fs-5 text-light ">Best for small teams</p>
                                 </div>
                                 <div class="text-center my-3 text-light">
-                                    <h3 class="fw-bold fs-3">$12</h3>
+                                    <h3 class="fw-bold fs-2"><span style="font-size: 35px;">$</span>12</h3>
                                     <p class="fs-5 mb-5">per month</p>
                                 </div>
-                                <a href="#" class="btn btn-lg  btn-light border-secondary">Get stardet now</a>
+                                <a href="#" class=" btn btn-light btn-lg">Get stardet now</a>
                             </div>
                         </div>
                     </div>
@@ -236,10 +255,10 @@
                                     <p class="card-text fs-5">Best for small teams</p>
                                 </div>
                                 <div class="text-center my-3">
-                                    <h3 class="fw-bold fs-3">$12</h3>
+                                    <h3 class="fw-bold fs-2"><span style="font-size: 35px;">$</span>12</h3>
                                     <p class="fs-5 mb-5">per month</p>
                                 </div>
-                                <a href="#" class="btn btn-block btn-lg border-secondary">Get stardet now</a>
+                                <a href="#" class="btn btn-outline-primary btn-lg">Get stardet now</a>
                             </div>
                         </div>
                     </div>
@@ -258,9 +277,9 @@
                 <div class="col-12 col-md-8">
                     <div class="row row-cols-1 row-cols-md-3">
                         <!-- team -->
-                        <div class="col">
+                        <div class="col d-flex flex-column align-items-center">
                             <h4 class="fw-bold text-center">Team</h4>
-                            <button class="btn btn-outline-secondary d-none d-md-flex w-100 w-md-auto my-3">Free
+                            <button class="btn btn-outline-primary d-none d-md-flex py-2 px-4 my-3">Free
                                 trial</button>
                             <ul class="list-unstyled d-md-none">
                                 <li class="py-2 ps-2">
@@ -333,13 +352,13 @@
                                         </svg>
                                     </span>
                                 </li>
-                                <button class="btn btn-outline-secondary w-100 w-md-auto my-3">Free trial</button>
+                                <button class="btn btn-outline-primary w-100 w-md-auto my-3">Free trial</button>
                             </ul>
                         </div>
                         <!-- company -->
-                        <div class="col">
+                        <div class="col d-flex flex-column align-items-center">
                             <h4 class="fw-bold text-center">Company</h4>
-                            <button class="btn btn-outline-secondary d-none d-md-flex w-100 w-md-auto my-3">Free
+                            <button class="btn btn-outline-primary d-none d-md-flex py-2 px-4 my-3">Free
                                 trial</button>
                             <ul class="list-unstyled d-md-none">
                                 <li class="py-2 ps-2">
@@ -410,14 +429,14 @@
                                         </svg>
                                     </span>
                                 </li>
-                                <button class="btn btn-outline-secondary w-100 w-md-auto my-3">Free trial</button>
+                                <button class="btn btn-outline-primary w-100 w-md-auto my-3">Free trial</button>
                             </ul>
                         </div>
 
                         <!-- enterprise -->
-                        <div class="col">
+                        <div class="col d-flex flex-column align-items-center">
                             <h4 class="fw-bold text-center">Enterprise</h4>
-                            <button class="btn btn-outline-secondary d-none d-md-flex w-100 w-md-auto my-3">Free
+                            <button class="btn btn-outline-primary d-none d-md-flex py-2 px-4 my-3">Free
                                 trial</button>
                             <ul class="list-unstyled d-md-none">
                                 <li class="py-2 ps-2">
@@ -490,7 +509,7 @@
                                         </svg>
                                     </span>
                                 </li>
-                                <button class="btn btn-outline-secondary w-100 w-md-auto my-3">Free trial</button>
+                                <button class="btn btn-outline-primary w-100 w-md-auto my-3">Free trial</button>
                             </ul>
                         </div>
                     </div>
@@ -710,13 +729,13 @@
                     <h2 class="my-4 fw-bold">Any questions? Check out the FAQs</h2>
                     <p class="my-4 text-secondary fs-5">Still have unanswered questions and need to get in touch?
                     </p>
-                    <button type="button" class="btn btn-primary btn-lg my-3 fs-6 p-3">Contact support</button>
+                    <button type="button" class="btn btn-accordion btn-primary btn-lg my-3 fs-6 p-3">Contact support</button>
                 </div>
                 <!-- accordeon -->
                 <div class="col-12 col-md-7">
                     <div class="accordion" id="accordionExample">
                         <!-- item-1 -->
-                        <div class="accordion-item my-4 rounded">
+                        <div class="accordion-item my-4 rounded" >
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed rounded-2 fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
@@ -933,18 +952,20 @@
                     <form action="">
                         <div class="d-md-none input-form position-relative">
                             <input class="my-4 ps-5 rounded" type="email" name="" id="email" placeholder="Your Email">
-                            <button class="btn btn-primary btn-lg d-md-block fs-6 w-100 my-4" type="button">Get
+                            <button class="btn btn-primary btn-lg text-nowrap d-md-block  my-4" type="button">Get
                                 started for free</button>
                         </div>
                         <div class="d-none d-md-flex input-forms position-relative ">
-                            <input class="input-forms ps-5  my-4 rounded-0 rounded-start w-70" type="email" name="" id="email" placeholder="Your Email">
-                            <button class="btn btn-primary rounded-0 btn-lg  py-0 d-md-block fs-6 my-4" type="button">Get
+                            <input class="input-forms ps-5 my-4 rounded-0 rounded-start w-70 flex-grow-1" type="email" name=""
+                                id="email" placeholder="Your Email">
+                            <button class="btn btn-primary rounded-0 btn-lg text-nowrap d-md-block my-4 flex-grow-2"
+                                type="button">Get
                                 started for free</button>
                         </div>
                     </form>
                 </div>
             </div>
-
+        </div>
         </div>
     </main>
     <!-- footer -->
@@ -1080,13 +1101,13 @@
                         </div>
                         <div class="col-mail col-12 col-md-5 col-lg-3 ">
                             <h6>Contact US</h6>
-                            <a href="">email@example.com</a>
+                            <a class="accordion-email" href="#">email@example.com</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-mail col-12 col-md-5 col-lg-3 d-none d-lg-block">
                     <h6>Contact US</h6>
-                    <a href="">email@example.com</a>
+                    <a class="accordion-email" href="#">email@example.com</a>
                 </div>
             </div>
 

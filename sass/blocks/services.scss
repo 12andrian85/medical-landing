@@ -9,18 +9,23 @@
         stroke: $color-primary;
     }
 
-    .btn {
-        width: 100%;
-        color: $color-primary;
+    .btn{
+        // margin-right: 20px;
+    }
+
+    img{
+        object-fit: cover;
     }
 
     .btn:hover {
-        background-color: $color-primary;
+        background-color: $color-blue;
         color: $color-white;
+        box-shadow: none;
+        border-color: $color-primary;
 
         .icon {
-            stroke: white;
-            fill: white;
+            stroke: $color-white;
+            fill: $color-white;
         }
     }
 
@@ -36,76 +41,50 @@
         }
 
         .btn {
-            position: relative;
-            background-color: rgb(216, 217, 221);
-            border-radius: 5px;
-            color: black;
+            font-weight: bold;
+            background-color: $color-secondary;
+            border: none;
             margin: 10px;
-            padding-left: 30px;
         }
 
-        .btn::before {
-            position: absolute;
-            content: "";
-            width: 20px;
+        .btn svg {
             height: 20px;
-            // background-image: url(/img/services/graduation-cap-svgrepo-com.svg);
-            background-size: cover;
-            left: 110px;
-            top: 50%;
-            transform: translateY(-50%);
+            width: 20px;
+            margin-right: 5px;
+            fill: $color-grey;
+            stroke: $color-grey;
         }
+
 
         .btn:hover {
+            background-color: $color-secondary;
+            color: $color-primary;
+
+            svg {
+                fill: $color-primary;
+                stroke: $color-primary;
+            }
+        }
+
+        .btn:active {
             background-color: $color-primary;
             color: $color-white;
-        }
 
-        .btn-education:before {
-            background-image: url("/img/services/graduation-cap-svgrepo-com.svg");
-        }
-
-        .btn-ecomerce:before {
-            background-image: url("/img/services/cart-4-svgrepo-com.svg");
-        }
-
-        .btn-sports:before {
-            background-image: url("/img/services/run-svgrepo-com.svg");
-        }
-
-        .btn-construction:before {
-            background-image: url("/img/services/paint-roller-2-svgrepo-com.svg");
-        }
-
-        .btn-medicine:before {
-            background-image: url("/img/services/medical-cross-svgrepo-com.svg");
-        }
-
-        .btn-realestate:before {
-            background-image: url("/img/services/buildings-svgrepo-com.svg");
-        }
-
-        .btn-wellness:before {
-            background-image: url("/img/services/spa-svgrepo-com.svg");
+            svg {
+                fill: $color-grey-light;
+                stroke: $color-grey-light;
+            }
         }
 
         .card {
             margin: 0;
             padding: 50px 10px 30px 10px;
-        }
 
-        .card img {
-            height: 100%;
-            object-fit: cover;
         }
 
         .card-title {
             font-size: 2rem;
         }
-    }
-
-    .splide__list {
-        // width: max-content;
     }
 
     .splide__slide .is-next .is-visible {
@@ -122,23 +101,22 @@
         width: 100%;
 
     }
-    .footer{
-      
 
+    form {
+        .btn-form {
+            box-shadow: 01px 3px 8px 6px rgba(35, 65, 174, 0.2);
+        }
+
+        .btn-form:hover {
+            background-color: $color-blue;
+            box-shadow: none;
+        }
     }
 
 }
 
 @media (min-width: $width-tablet) {
     .services {
-
-
-        .btn {
-            width: auto;
-            margin-right: 20px;
-        }
-
-
 
         .category {
             .tab {

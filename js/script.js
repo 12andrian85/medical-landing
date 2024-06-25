@@ -1,4 +1,4 @@
-const slideReviews = document.querySelector('#reviews')
+ const slideReviews = document.querySelector('#reviews')
 const slideNews = document.querySelector('#news')
 const slideComment = document.querySelector('#comment')
 const slideSocials = document.querySelector('#socials')
@@ -8,7 +8,14 @@ const slideSubmenu = document.querySelector('#submenu')
 const slideLogo = document.querySelector('#logo')
 const slideSlide1 = document.querySelector('#slide1')
 
+// Handle navigation open/close
+const btnToggle = document.querySelector('.navbar__toggle')
+const backdrop = document.querySelector('.backdrop')
 
+btnToggle.addEventListener('click', () => {
+  backdrop.classList.toggle('backdrop--show')
+})
+console.log(slideSubmenu)
 const allBreakpoints = {
   640: {
     perPage: 1,
@@ -24,7 +31,6 @@ const allBreakpoints = {
   },
 }
 
-
 if (slideReviews) {
   var reviews = new Splide('#reviews', {
     type: 'loop',
@@ -32,7 +38,14 @@ if (slideReviews) {
     focus: 'center',
     arrows: boolean = false,
     breakpoints: {
-      // ...allBreakpoints,
+      ...allBreakpoints,
+      1024:{
+        perPage: 4,
+      },
+      
+      2570: {
+        perPage: 5,
+      },
     }
 
   });
@@ -75,7 +88,7 @@ if (slideSlide1) {
         perPage: 2,
       },
       1200: {
-        perPage: 3,
+        perPage: 4,
       },
     }
 
@@ -191,7 +204,6 @@ if (slideNews) {
   news.mount();
 }
 
-
 if (slideSubmenu) {
   var submenu = new Splide('#submenu', {
     // type: 'loop',
@@ -243,9 +255,12 @@ if (slideLogo) {
 }
 
 const category = document.querySelector('.category')
-const allTabButtons = category.querySelectorAll('.tab__item')
+const allTabButtons = category.querySelectorAll('.tab__list')
 const allTabContents = category.querySelectorAll('.tab__content')
 const tabContainer = category.querySelector('.tab__container')
+const close = category.querySelector(".btn-close")
+
+console.log(allTabButtons)
 
 // variant 1
 Array.from(allTabButtons).forEach(element => {

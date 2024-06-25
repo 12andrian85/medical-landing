@@ -120,9 +120,9 @@
 }
 
 .about-link:hover::before {
-    color: white;
-    fill: white;
-    stroke: white;
+    // color: white;
+    // fill: white;
+    // stroke: white;
 }
 
 //  awards
@@ -153,9 +153,9 @@
     }
 
     .about-reviews-slider {
-        border: 1px solid grey;
+        // border: 1px solid grey;
         border-radius: 15px;
-        box-shadow: 0px 1px 9px 0px $color-grey;
+        box-shadow: 0px 1px 9px 0px $color-shadow;
     }
 
     .reviews-inner {
@@ -248,13 +248,6 @@
 
 .about-contact--email:hover {
     text-decoration: none;
-}
-
-
-
-.btn:hover {
-    background-color: $color-grey-light;
-    color: $color-black;
 }
 
 .socials {

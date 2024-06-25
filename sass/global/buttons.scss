@@ -8,14 +8,14 @@ button {
     // font-size: 16px;
     // font-weight: 600;
     // color: $color-white;
-    
+
     // background-color: $color-secondary;
     // // border: 0;
     // outline: 0;
 
     // manage all states
     &:hover {
-        background-color: $color-blue-dark;
+        // background-color: $color-blue-dark;
     }
     
     &:focus {
@@ -28,8 +28,22 @@ button {
     &:disabled {}
 }
 
+.btn {
+    padding: .6em 1.5em;
+    
+    &.btn-sm {
+        padding: .5em 1.3em;
+    }
 
+    &.btn-lg {
+        padding: .7em 1.7em;
+        font-size: 1em;
+        font-weight: 600;
+    }
 
-// .btn-small {}
-// .btn-medium {}
-// .btn-large {}
+    &.btn-light {
+        &:hover {
+            background-color: $color-grey-light;
+        }
+    }
+}

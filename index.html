@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    
+    <!-- <link href="../node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>Medical Landing</title>
 </head>
 <!-- svg-elements -->
@@ -202,6 +203,13 @@
             fill=""></path>
     </symbol>
 </svg>
+<!-- play -->
+<svg width="0" height="0" class="hidden">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="play-svgrepo-com">
+      <path d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z" fill="#1C274C"></path>
+    </symbol>
+  </svg>
+
 
 
 
@@ -214,28 +222,33 @@
         </div>
         <nav class="navbar navbar-expand-lg bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex" href="sidebar.html">
-                    <img src="img/logo.svg" alt="Bootstrap" width="50" height="34">
+                <a class="navbar-brand d-flex" href="index.html">
+                    <img src="public/icons/logo.svg" alt="Bootstrap" width="50" height="34">
                     <h2 class="navbar-brand-title">Silicon</h2>
                 </a>
                 <div class="d-flex d-lg-none">
-                    <form class="form d-none d-md-flex align-items-center" role="search">
-                        <span class="form-text d-none d-md-flex">Light</span>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-                          </div>
-                        <span class="form-text  d-none d-md-flex">Dark</span>
+                    <form class="form d-flex align-items-center" role="search">
+                        <div class="form-check form-switch d-flex align-items-center px-1 pt-1 m-0">
+                            <label class="d-none d-md-block fw-bolder me-2" for="checked">Light</label>
+                            <input class="m-0 form-check-input fs-3" type="checkbox" role="switch" id="checked" checked>
+                            <label class="d-none d-md-block fw-bolder ms-2" for="checked">Darck</label>
+                        </div>
                         <button class=" d-none d-lg-flex btn btn-outline-success" type="submit">Buy now</button>
                     </form>
-                    <button class=" order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar__toggle order-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fs-3"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav  me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px-;">
+                    <ul class="navbar-nav  me-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item dropdown">
+                            <div
+                                class="w-100 d-flex d-lg-none align-items-center justify-content-between border-bottom border-lg-0">
+                                <h2 class="fs-3 fw-bolder py-3 m-0">Menu</h2>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
                             <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Landings
@@ -275,62 +288,44 @@
                         <li class="nav-item">
                             <a class="nav-link">UI Kit</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item nav-item--border">
                             <a class="nav-link">Docs</a>
                         </li>
+                        <button class=" d-lg-none btn btn-burger btn-primary m-3 mb-0" type="submit">Buy nowv</button>
                     </ul>
                 </div>
 
                 <form class="form d-none d-lg-flex align-items-center" role="search">
-                    <span class="form-text  d-none d-md-flex">Light</span>
+                    <label class="form-text  d-none d-md-flex" for="flexSwitchCheck">Light</label>
                     <div class="form-check form-switch d-flex align-items-center px-1">
-                        <input class=" m-0 ps-2 form-check-input" type="checkbox" role="switch"
-                            id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                        <input class=" m-0 mt-1 ps-2 form-check-input" type="checkbox" role="switch"
+                            id="flexSwitchCheck" checked>
+                        <label class="form-check-label" for="flexSwitchCheck"></label>
                     </div>
-                    <span class="form-text  d-none d-md-flex">Dark</span>
-                    <button class="btn btn-nav btn-outline-success" type="submit">Buy now</button>
+                    <label class="form-text  d-none d-md-flex" for="flexSwitchCheck">Dark</label>
+                    <button class="btn btn-nav btn-primary btn-sm ms-4" type="submit">Buy now</button>
                 </form>
             </div>
         </nav>
     </header>
     <main class="main">
-        <!-- c-breadcrumb -->
-        <div class="c-breadcrumb" style="margin-top: 95px;">
-            <div class="row">
-                <div class="col">
-                    <a class="home   text text-decoration-none" href="">
-                        <svg class="icon ">
-                            <use xlink:href="#home-svgrepo-com"></use>
-                        </svg>
-                        Home
-                    </a>
-                    <span class="link text-primary  mx-2 text-decoration-none">
-                        <svg class="icon">
-                            <use xlink:href="#double-right-svgrepo-com"></use>
-                        </svg>
-                        link</span>
-                    <link>
-                </div>
-            </div>
-        </div>
-        <!-- section -->
-        <section class="section">
+        <div class="backdrop d-lg-none"></div>
+        <!-- banner -->
+        <section class="banner">
             <div class="container">
-                <div class="row">
-                    <div class="section__item col-12 col-lg-6">
-                        <div class="section__block">
-                            <p class="section__subtitle">PROFESSIONAL MEDICAL CENTER</p>
-                            <h1 class="section__title">We Take Care of Your Health</h1>
-                            <p class="section__link">Don't have insurance? <a href="">Click here.</a></p>
+                <div class="row pt-2 pt-mt-0">
+                    <div class="banner__item col-12 col-lg-6">
+                        <div class="banner__block">
+                            <p class="banner__subtitle">PROFESSIONAL MEDICAL CENTER</p>
+                            <h1 class="banner__title">We Take Care of Your Health</h1>
+                            <p class="banner__link">Don't have insurance? <a href="">Click here.</a></p>
                         </div>
-                        <div class="d-none d-lg-flex section__med">
-                            <img src="/img/hero-img-2.jpg" alt="">
+                        <div class="d-none d-lg-flex banner__med">
+                            <img src="public/img/hero-img-2.jpg" alt="">
                         </div>
-
                     </div>
-                    <div class="section__clinic  section__item--position d-lg-block col-12 col-lg-">
-                        <div class="section__inner">
+                    <div class="banner__clinic  banner__item--position d-lg-block col-12 col-lg-">
+                        <div class="banner__inner">
                             <h2>Silicon Medical Center</h2>
                             <p>
                                 Our medical center provides a wide range of health care services.
@@ -338,16 +333,18 @@
                                 without any unexpected surprises. We appreciate your trust greatly.
                                 Our patients choose us and our services because they know we are the best.
                             </p>
-                            <button type="button" class="btn btn-secondary btn-lg btn-light">About Us
+                            <button type="button" class="btn btn-secondary btn-lg btn-light">
+                                About Us
+                                <img class="ms-4"  src="public/icons/arrow_right_fonts.svg" alt="">
                         </div>
                     </div>
-                    <div class="section__item col-12 col-lg-6">
-                        <div class=" d-none d-lg-block section__foto">
-                            <img class="section__img" src="/img/hero-img-1.jpg" alt="">
+                    <!-- work time -->
+                    <div class="banner__item col-12 col-lg-6">
+                        <div class=" d-none d-lg-block banner__foto">
+                            <img class="banner__img" src="public/img/hero-img-1.jpg" alt="">
                         </div>
-
-                        <div class="section__address section__address--time">
-                            <div class="section__wrap">
+                        <div class="banner__address banner__address--time">
+                            <div class="banner__wrap">
                                 <span>
                                     <strong>Mon - Fri</strong>: 9:00 am - 22:00 am <br>
                                 </span>
@@ -355,8 +352,9 @@
                                     <strong>Sat - Sun:</strong>: 9:00 am - 20:00 am
                                 </span>
                             </div>
-                            <a href="#" type="button" class="button">
+                            <a href="#" class="btn btn-meeting  btn-primary btn-lg overflow-hidden" type="button">
                                 Make an appointment
+                                <img class="text-white" src="public/icons/arrow_right_fonts_2.svg" alt="">
                             </a>
                         </div>
                     </div>
@@ -372,7 +370,7 @@
                         <a href="" class="card-inner">
                             <div
                                 class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
-                                <img src="/img/doctor.svg" alt="">
+                                <img src="public/icons/doctor.svg" alt="">
                                 <div class="card-body">
                                     <h3 class="card-title">Find a Doctor</h3>
                                     <p class="card-text">Some quick example text to build
@@ -389,12 +387,13 @@
                     <!-- item -->
                     <div class="info-item col-12 col-md-4 d-lg-flex fl">
                         <a href="" class="card-inner">
-                            <div
-                                class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
-                                <img src="/img/ambulance.svg" alt="">
+                            <div class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
+                                <img src="public/icons/ambulance.svg" alt="">
                                 <div class="card-body">
                                     <h3 class="card-title">Emergency Service</h3>
-                                    <p class="card-text card-text--call fw-bolder fs-3 text-black">(406) 555 0120
+                                    <p class="card-text card-text--call fw-bolder text-black">
+                                        (406) 555
+                                        0120
                                     </p>
                                     <a href="" class="card-link">Contact Us
                                         <svg class="svg-icon">
@@ -410,7 +409,7 @@
                         <a href="" class="card-inner">
                             <div
                                 class="card flex-column flex-sm-row flex-md-column flex-xxl-row align-items-center card-hover border-secondary-subtle h-100 ">
-                                <img src="/img/virus.svg" alt="">
+                                <img src="public/icons/virus.svg" alt="">
                                 <div class="card-body">
                                     <h3 class="card-title">COVID-19 Info</h3>
                                     <p class="card-text">
@@ -431,6 +430,15 @@
         <!-- feature -->
         <div class="feature">
             <div class="container">
+                <div class="position-relative">
+                    <img class="w-100 object-fit-cover" src="public/img/video-cover.jpg" alt="">
+                    <a href="public/video/istockphoto-1176764896-640_adpp_is.mp4" data-bs-toggle="video" class=" btn btn-primary position-absolute top-50 start-50 rounded-pill" style="height: 70px; width: 70px;">
+
+                        <svg class="icon w-100 h-100" style="">
+                            <use xlink:href="#play-svgrepo-com"></use>
+                          </svg>
+                    </a>
+                </div>
                 <div class="row justify-content-center ">
                     <div class="col col-lg-8 feature__head">
                         <h2>See What Makes Us Different</h2>
@@ -441,9 +449,9 @@
                     </div>
                     <div class="feature__block">
                         <div class="feature__video">
-                            <video controls muted width="" src="/img/20220421_154913.mp4">
-                                <source src="/img/20220421_154913.mp4">
-                                <source src="/img/20220421_154913.WebM">
+                            <video controls muted width="" src="public/video/istockphoto-1176764896-640_adpp_is.mp4">
+                                <!-- <source src="public/video/7322893-uhd_4096_2160_24fps.mp4">
+                                <source src="public/video/istockphoto-1176764896-640_adpp_is.mp4"> -->
                             </video>
                         </div>
                     </div>
@@ -464,7 +472,7 @@
                         <button type="button" class="btn btn-primary btn-lg">All services</button>
                     </div>
                     <div class="col col-md-6 col-lg-4">
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4 mt-lg-0">
                             <a href="" class="technology-inner ">
                                 <div class="technology-block technology-block--cardiology">
                                     <h3 class="technology-title">Cardiology</h3>
@@ -480,7 +488,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4">
                             <a href="" class="technology-inner ">
                                 <div class="technology-block technology-block--scalpe">
                                     <h3 class="technology-title">Surgery</h3>
@@ -496,7 +504,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4">
                             <a href="" class="technology-inner">
                                 <div class="technology-block technology-block--radiology">
                                     <h3 class="technology-title">Radiology</h3>
@@ -514,7 +522,7 @@
                         </div>
                     </div>
                     <div class="col col-md-6 col-lg-4">
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4 mt-lg-0">
                             <a href="" class="technology-inner">
                                 <div class="technology-block technology-block--stethoscope">
                                     <h3 class="technology-title">Family Medicine</h3>
@@ -529,7 +537,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4">
                             <a href="" class="technology-inner ">
                                 <div class="technology-block technology-block--lungs">
                                     <h3 class="technology-title">Pulmonari</h3>
@@ -545,7 +553,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="c-technology my-2">
+                        <div class="c-technology my-4">
                             <a href="" class="technology-inner">
                                 <div class="technology-block technology-block--tooth">
                                     <h3 class="technology-title">Dental Care</h3>
@@ -599,8 +607,7 @@
                                 at volutpat aenean.
                             </p>
                         </div>
-                        <button type="button"
-                            class="my-4 shadow-danger support-group__button btn btn-danger btn-lg">Learn
+                        <button type="button" class="btn-danger my-4 support-group__button btn  btn-lg">Learn
                             moree</button>
                     </div>
                 </div>
@@ -610,15 +617,14 @@
         <div class="specialists">
             <div class="container">
                 <div class="col specialists-title">
-                    <h2>Qualified Medical Specialists</h2>
-                    <button class="specialists-btn btn border btn-lg fs-6 py-2">See all doctors
+                    <h2 class="mb-3">Qualified Medical Specialists</h2>
+                    <button class="specialists-btn btn btn-outline-secondary ">See all doctors
                         <svg class="icon specialists-icon">
                             <use xlink:href="#arrow-right-svgrepo-1"></use>
                         </svg>
                     </button>
                 </div>
                 <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4">
-                    <!-- items -->
                     <!-- item -->
                     <div class="col">
                         <div class="c-card-person">
@@ -650,19 +656,19 @@
                                     <p class="card-text">Neurosurgeon</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star-1.svg" alt="">
+                                            <img src="public/icons/star-1.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(19 reviews)</span>
@@ -702,19 +708,19 @@
                                     <p class="card-text">Therapist</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(4 reviews)</span>
@@ -754,19 +760,19 @@
                                     <p class="card-text">Anesthesiologist</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star-1.svg" alt="">
+                                            <img src="public/icons/star-1.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(12 reviews)</span>
@@ -806,19 +812,19 @@
                                     <p class="card-text">Surgeon</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(8 reviews)</span>
@@ -858,19 +864,19 @@
                                     <p class="card-text">Cardiologist</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star-1.svg" alt="">
+                                            <img src="public/icons/star-1.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(14 reviews)</span>
@@ -910,19 +916,19 @@
                                     <p class="card-text">Pediatrician</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star-1.svg" alt="">
+                                            <img src="public/icons/star-1.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(10 reviews)</span>
@@ -962,19 +968,19 @@
                                     <p class="card-text">Dentist</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(5 reviews)</span>
@@ -1014,19 +1020,19 @@
                                     <p class="card-text">Dentist</p>
                                     <div class="card-stars">
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </span>
                                         <span class="card-star"></span>
                                         <span>(5 reviews)</span>
@@ -1053,11 +1059,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1078,11 +1084,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1103,11 +1109,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1128,11 +1134,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1153,11 +1159,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1178,11 +1184,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1203,11 +1209,11 @@
                                             bibendum faucibus est. Suspendisse egestas
                                             facilisis erat eu eleifend.
                                         <div class="card-stars d-flex">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
-                                            <img src="/img/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
+                                            <img src="public/icons/star.svg" alt="">
                                         </div>
                                         </p>
                                     </div>
@@ -1240,8 +1246,8 @@
                                         <div class="card-body">
                                             <div class="card-inner d-flex">
                                                 <button href=""
-                                                    class="card-btn btn btn-secondary- btn-sm">diseases</button>
-                                                <span>1day ago</span>
+                                                    class="card-btn btn btn-sm">diseases</button>
+                                                <span>2day ago</span>
                                             </div>
                                             <h5 class="card-title">
                                                 <a href="">
@@ -1356,7 +1362,7 @@
                         <h2 class="address-title">
                             Get Free Professional Consultation
                         </h2>
-                        <ul class="address-list">
+                        <ul class="addres-list">
                             <li class="address-item address-item--location">
                                 <span>445 Bayshor Blvd, San Francisco, CA 94124</span>
                             </li>
@@ -1392,7 +1398,7 @@
                         Non feugiat feugiat egestas nulla nec. Arcu tempus,
                         eget elementum dolor ullamcorper sodales ultrices eros.
                     </p>
-                    <label class="footer__label" for="input">Subscribe to our newsletter</label>
+                    <label class="footer__label mv-1 fw-bolder" for="input">Subscribe to our newsletter</label>
                     <div class="input-group mb-3">
                         <input type="text" id="input" class="footer__input form-control" placeholder="Your e-amil"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -1521,7 +1527,7 @@
                     <a href="">email@example.com</a>
                 </div>
             </div>
-            <p class="py-4 fs-xs text-second">© All rights reserved. Made by 
+            <p class="py-4 fs-xs text-second">© All rights reserved. Made by
                 <a class="text-decoration-none" href="#">eUU</a>
             </p>
         </div>

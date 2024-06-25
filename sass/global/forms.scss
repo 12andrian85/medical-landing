@@ -32,10 +32,10 @@ input[type="password"],
 input[type="number"],
 input[type="tel"] {
     width: 100%;
-    padding: 15px 10px;
+    padding: 0.8rem;
     color: $color-grey;
-    border: 1px solid $color-grey;
-    border-radius: 10px;
+    border: 1px solid $color-grey-light;
+    border-radius: 7px;
 
     // Manage hover state
     // &:hover {
@@ -59,9 +59,16 @@ textarea {
     min-height: 100px;
     padding: 20px;
     resize: vertical;
-    border: 2px solid grey;
+    border: 2px solid $color-grey-light;
     border-radius: 15px;
+    background-color: $color-white;
+    z-index: 1;
 }
+textarea:focus{
+    border: 2px solid $color-grey-light;
+    box-shadow: 0px 3px 6px 4px rgb(128 128 128 / .3);
+}
+    
 
 // style custom radio and checkbox
 input[type="radio"],
@@ -146,7 +153,7 @@ input[type="checkbox"] {
 
 fieldset {
     margin: 0;
-    padding: 40px 30px;
+    padding: 0 30px;
     border: none;
 }
 

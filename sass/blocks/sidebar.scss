@@ -17,10 +17,15 @@
     .sidebar-icon svg {
         height: 30px;
         width: 30px;
+        margin-right: 10px;
     }
 
     .card-link {
         text-decoration: none;
+    }
+
+    .card-link h3:hover {
+        color: $color-primary;
     }
 
     .card-link h3 {
@@ -53,6 +58,10 @@
     .sidebar-block {
         .card-link {
             text-decoration: none;
+        }
+
+        .card-link h3:hover {
+            color: $color-primary;
         }
 
         .card-link h3 {
@@ -145,6 +154,11 @@
             margin: 0 10px;
         }
 
+        &__btn:hover {
+            background-color: transparent;
+            border: none;
+        }
+
         &__btn {
             background-color: transparent;
             border: none;
@@ -167,14 +181,7 @@
         }
     }
 
-    &__btn {
-        position: relative;
-        color: $color-blue;
-        border-radius: 10px;
-        border: 1px solid $color-blue;
 
-
-    }
 
     &__svg {
         width: 20px;
@@ -184,12 +191,19 @@
 
     }
 
+    .btn-tags:hover {
+        color: $color-black;
+    }
 
+    .btn {
+        color: $color-primary;
+        border: 1px solid $color-grey-light;
+    }
 
     button:hover {
         color: $color-white;
         background-color: $color-blue;
-        border: $color-blue;
+        border: 1px solid $color-grey-light;
 
         .sidebar__svg {
             fill: white;
@@ -201,15 +215,19 @@
         width: 25px;
         left: 30px;
     }
-    
-    &__email:focus-within{
+
+    &__email:focus-within {
         .sidebar__svg-message {
             display: none;
         }
-        
+
 
     }
-    
+
+    .sidebar-terms a:hover {
+        text-decoration: none;
+    }
+
 }
 
 @media (min-width: $width-tablet) {
@@ -220,4 +238,14 @@
     }
 }
 
-@media (min-width: $width-desktop) {}
+@media (min-width: $width-large) {
+    .sidebar {
+        .subscription__text {
+            font-size: 1.6rem;
+        }
+
+        .subscription__col label {
+            font-size: 18px;
+        }
+    }
+}
