@@ -710,11 +710,7 @@ form .field {
   color: #7a7b7a;
 }
 
-.c-breadcrumb {
-  margin-top: 50px;
-}
 .c-breadcrumb .home {
-  margin-left: 40px;
   color: #6c6c6d;
 }
 .c-breadcrumb .icon {
@@ -1726,8 +1722,7 @@ form .field {
 .subscription__text {
   font-size: 20px;
   font-weight: 600;
-  padding: 20px;
-  padding-left: 1px;
+  padding: 15px 0 15px 20px;
 }
 .subscription__col {
   display: flex;
@@ -1765,12 +1760,18 @@ form .field {
   .subscription__title {
     text-align: start;
   }
+  .subscription__text {
+    padding: 15px 0 0px 10px;
+  }
 }
 @media (min-width: 1200px) {
   .subscription__title {
     text-align: start;
     font-size: 3rem;
     padding: 40px 0;
+  }
+  .subscription__text {
+    padding: 10px 0 0px 10px;
   }
 }
 .about__col {

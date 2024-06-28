@@ -23,11 +23,23 @@ $color-text-base: $color-blue-dark;
 
 $font-family: 'Open Sans', sans-serif;
 
+
+$box-shadow-sm: 0 5px 5px rgba(0,0,0, .2);
+$box-shadow-md: 0 10px 10px rgba(0,0,0, .2);
+$box-shadow-lg: 0 15px 15px rgba(0,0,0, .2);
+
+
+// breackpoints
 $width-mobile: 320px;
 $width-tablet: 768px;
 $width-large: 992px;
 $width-desktop: 1200px;
 
-$box-shadow-sm: 0 5px 5px rgba(0,0,0, .2);
-$box-shadow-md: 0 10px 10px rgba(0,0,0, .2);
-$box-shadow-lg: 0 15px 15px rgba(0,0,0, .2);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 860px,
+  xl: 1140px,
+  xxl: 1200px
+);

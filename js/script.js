@@ -56,16 +56,18 @@ if (slideReviews) {
 if (slideNews) {
   var news = new Splide('#news', {
     type: 'loop',
-    perPage: 3, // by default is max to be displayed
+    perPage: 4, // by default is max to be displayed
     focus: '',
     arrows: boolean = false,
     breakpoints: {
-      // ...allBreakpoints,
-      1440:{
-        perPage:3,
+      640: {
+        perPage: 1,
       },
-      2560: {
-        perPage: 3,
+      768: {
+        perPage: 2,
+      },
+      1200: {
+        perPage: 4,
       },
     }
 

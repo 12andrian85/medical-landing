@@ -24,9 +24,13 @@
 }
 
 @mixin container {
+    @media (min-width: $width-mobile ) {
+    padding: 0 10px;
+    }
 
+    
     @media (min-width: $width-tablet ) {
-        // padding: 0 30px;
+        padding: 0 10px;
     }
 
     @media (min-width: $width-desktop ) {
