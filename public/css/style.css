@@ -313,6 +313,7 @@ form .field {
 }
 .c-info .card {
   position: relative;
+  padding-bottom: 20px;
   border: 1px solid #7a7b7a;
 }
 .c-info .card .card-link {
@@ -2296,7 +2297,7 @@ form .field {
 }
 
 .pricing .title {
-  height: 500px;
+  height: 550px;
 }
 .pricing .accordion button::after {
   background-color: #f3f6ff;
@@ -2353,7 +2354,7 @@ form .field {
 
 @media (min-width: 1200px) {
   .pricing .title {
-    height: 550px;
+    height: 600px;
   }
 }
 .navbar {

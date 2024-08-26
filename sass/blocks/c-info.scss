@@ -2,6 +2,7 @@
 
     .card{
         position: relative;
+        padding-bottom: 20px;
         border: 1px solid $color-grey;
         .card-link{
             text-decoration: none;
@@ -10,7 +11,5 @@
     .card:hover{
         bottom: 10px;
         transition: 0.4s;
-        // animation:  1s forwards;
-        // transition: bottom 0.3s;
     }
 }
